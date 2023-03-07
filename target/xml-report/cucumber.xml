@@ -1,3 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="0.082" tests="0" skipped="0" failures="0" errors="0">
+<testsuite name="Cucumber" time="0.614" tests="6" skipped="0" failures="6" errors="0">
+<testcase classname="Create new test items" name="Admin can create new test item" time="0.177">
+<failure/>
+<system-out><![CDATA[
+Given Admin is logged in as an admin user...................................undefined
+When Admin navigate to the create test item page............................skipped
+Then Admin should see the required fields for creating or updating test items.skipped
+When Admin fill in the necessary fields to create a new test item...........skipped
+And Admin save the new test item............................................skipped
+Then Admin should see the new test item added to the list of test items.....skipped
+]]></system-out>
+</testcase>
+<testcase classname="Create new test items" name="Admin can view test items" time="0.006">
+<failure/>
+<system-out><![CDATA[
+Given Admin is logged in as an admin user...................................undefined
+When Admin navigate to the create test item page............................skipped
+Then Admin should see all the created test items displayed on the page......skipped
+]]></system-out>
+</testcase>
+<testcase classname="Create new test items" name="Admin can delete test item" time="0.019">
+<failure/>
+<system-out><![CDATA[
+Given Admin is logged in as an admin user...................................undefined
+When Admin navigate to the create test item page............................skipped
+And Admin have at least one test item created...............................skipped
+And Admin select the test item that needs to be deleted.....................skipped
+And Admin confirm the deletion..............................................skipped
+Then Admin should see the test item is no longer displayed on the test items page.skipped
+]]></system-out>
+</testcase>
+<testcase classname="Create new test items" name="Validate test item API endpoints" time="0.018">
+<failure/>
+<system-out><![CDATA[
+Given Admin is logged in as an admin user...................................undefined
+When Admin navigate to the create test item page............................skipped
+Given Admin have an API testing tool........................................skipped
+When Admin send API requests for creating, viewing, and deleting test items.skipped
+Then Admin should receive the expected status codes and data in the API responses.skipped
+]]></system-out>
+</testcase>
+<testcase classname="Create new test items" name="Admin can create test item using API" time="0.016">
+<failure/>
+<system-out><![CDATA[
+Given Admin is logged in as an admin user...................................undefined
+When Admin navigate to the create test item page............................skipped
+Given Admin have an API testing tool........................................skipped
+When Admin send a POST request for creating a new test item.................skipped
+Then Admin should see the new test item is created successfully.............skipped
+And the API response contains the correct details of the created test item..skipped
+]]></system-out>
+</testcase>
+<testcase classname="Create new test items" name="Verify test items in database" time="0.008">
+<failure/>
+<system-out><![CDATA[
+Given Admin is logged in as an admin user...................................undefined
+When Admin navigate to the create test item page............................skipped
+Given Admin have a database querying tool...................................skipped
+When Admin query the database for the test items............................skipped
+Then Admin should see the data in the database matches the expected values for the created test items.skipped
+]]></system-out>
+</testcase>
 </testsuite>
