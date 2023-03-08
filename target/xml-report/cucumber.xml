@@ -1,3 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="0.082" tests="0" skipped="0" failures="0" errors="0">
+<testsuite name="Cucumber" time="0.518" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="Patient Login and Update Info" name="Appointment update" time="0.153">
+<failure/>
+<system-out><![CDATA[
+When staff clicks on "MY PAGES" icon........................................undefined
+And clicks on Search Patient icon...........................................skipped
+And enters SSN into Patient "SSN" into SSN text box.........................skipped
+And clicks on Show Appointments button......................................skipped
+And clicks on edit button...................................................skipped
+And sets new startdateTime for appointment..................................skipped
+And sets new endDateTime for appointment....................................skipped
+And clicks on Save button to save...........................................skipped
+Then verify that appointment is updated.....................................skipped
+]]></system-out>
+</testcase>
 </testsuite>
