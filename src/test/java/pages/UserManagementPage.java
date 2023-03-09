@@ -9,6 +9,7 @@ import utilities.Driver;
 import java.util.List;
 
 public class UserManagementPage {
+
     public UserManagementPage() {
         PageFactory.initElements(Driver.getDriver(),this);
     }
@@ -19,6 +20,7 @@ public class UserManagementPage {
     @FindBy(xpath = "//a[@class='btn btn-primary btn-sm']")
     public List<WebElement> usersEditButtonList;
 
+//    @FindBy(name = "activated")
     @FindBy(id = "activated")
     public WebElement activatedCheckBox;
 
@@ -36,6 +38,7 @@ public class UserManagementPage {
 
     @FindBy(xpath = "//span[.='ID']")
     public WebElement sortById;
+
 
     // US_21 WebElements
 
@@ -108,6 +111,7 @@ public class UserManagementPage {
     public WebElement profile;
     @FindBy(xpath = "//span[text()='Back']")
     public WebElement backButtonOnUserViewPage;
+
 
 
 }
