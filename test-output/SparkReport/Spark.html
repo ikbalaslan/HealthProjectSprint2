@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Smoke Test Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Mar 8, 2023 01:43:37 PM</span></a>
+<a href="#"><span class="badge badge-primary">Mar 9, 2023 01:21:20 PM</span></a>
 </li>
 </ul>
 </div>
@@ -66,13 +66,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Mar 8, 2023 01:43:37 PM</h3>
+<h3>Mar 9, 2023 01:21:20 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Mar 8, 2023 01:45:50 PM</h3>
+<h3>Mar 9, 2023 01:21:33 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -123,7 +123,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>8</b> scenarios passed</small></div>
+<div><small data-tooltip='100%'><b>1</b> scenarios passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -143,7 +143,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>134</b> steps passed</small></div>
+<div><small data-tooltip='100%'><b>13</b> steps passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> steps failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -162,7 +162,7 @@
 </div></div>
 <script>
 var timeline = {
-"Room creation / View / Update / Delete":132.071
+"US19":12.321
 };
 </script>
 <div class="row">
@@ -172,8 +172,8 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@US17</td>
-<td>8</td>
+<td>@US19</td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -207,13 +207,13 @@ failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 8,
+passChild: 1,
 failChild: 0,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 134,
+passGrandChild: 13,
 failGrandChild: 0,
 warningGrandChild: 0,
 skipGrandChild: 0,
@@ -238,7 +238,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@US17</a>
+<a class="dropdown-item" href="#">@US19</a>
 </ul>
 </li>
 </ul>
@@ -249,9 +249,9 @@ eventsCount: 5,
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Room creation / View / Update / Delete</p>
+            <p class="name">US19</p>
             <p class="text-sm">
-              <span>1:43:38 PM</span> / <span>00:02:12:071</span>
+              <span>1:21:21 PM</span> / <span>00:00:12:321</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -259,10 +259,10 @@ eventsCount: 5,
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Room creation / View / Update / Delete</h5>
-<span class='badge badge-success'>03.08.2023 1:43:38 PM</span>
-<span class='badge badge-danger'>03.08.2023 1:45:50 PM</span>
-<span class='badge badge-default'>00:02:12:071</span>
+<h5 class="test-status text-pass">US19</h5>
+<span class='badge badge-success'>03.09.2023 1:21:21 PM</span>
+<span class='badge badge-danger'>03.09.2023 1:21:33 PM</span>
+<span class='badge badge-default'>00:00:12:321</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -274,7 +274,7 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>TC01 User (Admin) can create new rooms for impatients</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>TC09 Admin can delete existing Physicians</div>
       </div>
     </div>
         <div class="collapse">
@@ -314,710 +314,28 @@ eventsCount: 5,
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.clicks_room(java.lang.String)">
-                <span>And "Admin" clicks room</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.admin_clicks_create_a_new_room_button()">
-                <span>When "Admin"clicks create a new room button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.admin_enters_room_number()">
-                <span>And "Admin"enters room number</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.admin_enters_room_price()">
-                <span>And "Admin"enters room price</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.admin_clicks_save_button()">
-                <span>And "Admin"clicks save button</span>
+              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.PhysiciansPageStepDefs.clicksPhysician(java.lang.String)">
+                <span>And "Admin" clicks Physician</span>
       <div>
       </div>
               </div>
               <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.clicks_id_for_sort_list(java.lang.String)">
-                <span>And "Admin" clicks ID for sort list</span>
+                <span>When "Admin" clicks ID for sort list</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.admin_get_room_id()">
-                <span>And "Admin" get room id</span>
+              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.PhysiciansPageStepDefs.adminClicksDeleteButton()">
+                <span>When Admin clicks delete button</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.verify_from_rooms_page(java.lang.String,java.lang.String)">
-                <span>Then "Admin" verify "room_number" from Rooms Page</span>
+              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.PhysiciansPageStepDefs.adminConfirmDeletion()">
+                <span>And Admin confirm deletion</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.apiTestStepDefs.RoomApiStepDefs.admin_verify_from_api(java.lang.String)">
-                <span>Then "Admin"verify "room_id" from API</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.databaseTestStepDefs.RoomDBStepDefs.admin_verify_from_db(java.lang.String)">
-                <span>Then "Admin"verify "room_id" from DB</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.admin_close_the_app()">
-                <span>And Admin close the app</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="23"><span class="badge log pass-bg mr-2">Pass</span>TC02  there should be room number and room type</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.goes_home_page(java.lang.String)">
-                <span>Given "Admin" goes home page</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.clicks_account_menu(java.lang.String)">
-                <span>When "Admin" clicks account menu</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.clicks_sign_in(java.lang.String)">
-                <span>And "Admin" clicks sign in</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.LoginPageStepDefs.enters_in_username_field(java.lang.String,java.lang.String)">
-                <span>And "Admin" enters "admin_username" in username field</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.LoginPageStepDefs.enters_in_password_field(java.lang.String,java.lang.String)">
-                <span>And "Admin" enters "admin_password" in password field</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.LoginPageStepDefs.clicks_sign_in_submit_button(java.lang.String)">
-                <span>And "Admin" clicks sign in submit button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.clicks_items_titiles_menu(java.lang.String)">
-                <span>And "Admin" clicks items&titiles menu</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.clicks_room(java.lang.String)">
-                <span>And "Admin" clicks room</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.admin_clicks_create_a_new_room_button()">
-                <span>When "Admin"clicks create a new room button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.verifyFieldIsRequired(java.lang.String,java.lang.String)">
-                <span>Then "Admin" verify "room_number" field is required.</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.admin_enters_room_number()">
-                <span>And "Admin"enters room number</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.selectRoomType(java.lang.String,java.lang.String)">
-                <span>And "Admin"select room type "DELUXE"</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.admin_enters_room_price()">
-                <span>And "Admin"enters room price</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.admin_clicks_save_button()">
-                <span>And "Admin"clicks save button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.clicks_id_for_sort_list(java.lang.String)">
-                <span>And "Admin" clicks ID for sort list</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.admin_get_room_id()">
-                <span>And "Admin" get room id</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.verify_from_rooms_page(java.lang.String,java.lang.String)">
-                <span>Then "Admin" verify "room_number" from Rooms Page</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.adminVerifyRoom_typeIsFromRoomsPage(java.lang.String)">
-                <span>Then Admin verify room_type is "DELUXE" from Rooms Page</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.apiTestStepDefs.RoomApiStepDefs.verifyRoomNumberFromAPI(java.lang.String)">
-                <span>Then "Admin" verify roomNumber from API</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.databaseTestStepDefs.RoomDBStepDefs.verifyRoom_numberFromDB(java.lang.String)">
-                <span>Then "Admin" verify room_number from DB</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.apiTestStepDefs.RoomApiStepDefs.adminVerifyRoom_typeIsFromAPI(java.lang.String)">
-                <span>Then Admin verify room_type is "DELUXE" from API</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.databaseTestStepDefs.RoomDBStepDefs.adminVerifyIsFromDB(java.lang.String,java.lang.String)">
-                <span>Then Admin verify "room_type" is "DELUXE" from DB</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.admin_close_the_app()">
-                <span>And Admin close the app</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="49"><span class="badge log pass-bg mr-2">Pass</span>TC03 Current status can be set for the room</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.goes_home_page(java.lang.String)">
-                <span>Given "Admin" goes home page</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.clicks_account_menu(java.lang.String)">
-                <span>When "Admin" clicks account menu</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.clicks_sign_in(java.lang.String)">
-                <span>And "Admin" clicks sign in</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.LoginPageStepDefs.enters_in_username_field(java.lang.String,java.lang.String)">
-                <span>And "Admin" enters "admin_username" in username field</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.LoginPageStepDefs.enters_in_password_field(java.lang.String,java.lang.String)">
-                <span>And "Admin" enters "admin_password" in password field</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.LoginPageStepDefs.clicks_sign_in_submit_button(java.lang.String)">
-                <span>And "Admin" clicks sign in submit button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.clicks_items_titiles_menu(java.lang.String)">
-                <span>And "Admin" clicks items&titiles menu</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.clicks_room(java.lang.String)">
-                <span>And "Admin" clicks room</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.admin_clicks_create_a_new_room_button()">
-                <span>When "Admin"clicks create a new room button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.admin_enters_room_number()">
-                <span>And "Admin"enters room number</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.admin_enters_room_price()">
-                <span>And "Admin"enters room price</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.clicksStatus(java.lang.String)">
-                <span>And "Admin" clicks status</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.admin_clicks_save_button()">
-                <span>And "Admin"clicks save button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.clicks_id_for_sort_list(java.lang.String)">
-                <span>And "Admin" clicks ID for sort list</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.admin_get_room_id()">
-                <span>And "Admin" get room id</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.verifyStatusFromRoomsPage(java.lang.String)">
-                <span>Then "Admin" verify status from Rooms Page</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.apiTestStepDefs.RoomApiStepDefs.verifyStatusIsFromAPI(java.lang.String,java.lang.String)">
-                <span>Then "Admin" verify status is "true" from API</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.databaseTestStepDefs.RoomDBStepDefs.adminVerifyIsFromDB(java.lang.String,java.lang.String)">
-                <span>Then Admin verify "status" is "t" from DB</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.admin_close_the_app()">
-                <span>And Admin close the app</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="71"><span class="badge log pass-bg mr-2">Pass</span>TC04 Price can be added and cannot be blank</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.goes_home_page(java.lang.String)">
-                <span>Given "Admin" goes home page</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.clicks_account_menu(java.lang.String)">
-                <span>When "Admin" clicks account menu</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.clicks_sign_in(java.lang.String)">
-                <span>And "Admin" clicks sign in</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.LoginPageStepDefs.enters_in_username_field(java.lang.String,java.lang.String)">
-                <span>And "Admin" enters "admin_username" in username field</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.LoginPageStepDefs.enters_in_password_field(java.lang.String,java.lang.String)">
-                <span>And "Admin" enters "admin_password" in password field</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.LoginPageStepDefs.clicks_sign_in_submit_button(java.lang.String)">
-                <span>And "Admin" clicks sign in submit button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.clicks_items_titiles_menu(java.lang.String)">
-                <span>And "Admin" clicks items&titiles menu</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.clicks_room(java.lang.String)">
-                <span>And "Admin" clicks room</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.admin_clicks_create_a_new_room_button()">
-                <span>When "Admin"clicks create a new room button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.admin_enters_room_number()">
-                <span>And "Admin"enters room number</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.adminVerifyFieldIsRequired(java.lang.String)">
-                <span>And Admin verify "price" field is required.</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.admin_enters_room_price()">
-                <span>And "Admin"enters room price</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.admin_clicks_save_button()">
-                <span>And "Admin"clicks save button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.clicks_id_for_sort_list(java.lang.String)">
-                <span>And "Admin" clicks ID for sort list</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.admin_get_room_id()">
-                <span>And "Admin" get room id</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.apiTestStepDefs.RoomApiStepDefs.adminVerifyFromAPI(java.lang.String)">
-                <span>Then Admin verify "price" from API</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.databaseTestStepDefs.RoomDBStepDefs.adminVerifyFromDB(java.lang.String)">
-                <span>Then Admin verify "price" from DB</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.admin_close_the_app()">
-                <span>And Admin close the app</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="92"><span class="badge log pass-bg mr-2">Pass</span>TC05 Description can be provided optionally</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.goes_home_page(java.lang.String)">
-                <span>Given "Admin" goes home page</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.clicks_account_menu(java.lang.String)">
-                <span>When "Admin" clicks account menu</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.clicks_sign_in(java.lang.String)">
-                <span>And "Admin" clicks sign in</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.LoginPageStepDefs.enters_in_username_field(java.lang.String,java.lang.String)">
-                <span>And "Admin" enters "admin_username" in username field</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.LoginPageStepDefs.enters_in_password_field(java.lang.String,java.lang.String)">
-                <span>And "Admin" enters "admin_password" in password field</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.LoginPageStepDefs.clicks_sign_in_submit_button(java.lang.String)">
-                <span>And "Admin" clicks sign in submit button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.clicks_items_titiles_menu(java.lang.String)">
-                <span>And "Admin" clicks items&titiles menu</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.clicks_room(java.lang.String)">
-                <span>And "Admin" clicks room</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.admin_clicks_create_a_new_room_button()">
-                <span>When "Admin"clicks create a new room button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.admin_enters_room_number()">
-                <span>And "Admin"enters room number</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.admin_enters_room_price()">
-                <span>And "Admin"enters room price</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.admin_clicks_save_button()">
-                <span>And "Admin"clicks save button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.clicks_id_for_sort_list(java.lang.String)">
-                <span>And "Admin" clicks ID for sort list</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.admin_get_room_id()">
-                <span>And "Admin" get room id</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.verify_from_rooms_page(java.lang.String,java.lang.String)">
-                <span>Then "Admin" verify "room_number" from Rooms Page</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.admin_close_the_app()">
-                <span>And Admin close the app</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="111"><span class="badge log pass-bg mr-2">Pass</span>TC06 Created date as MM/DAY/YEAR and cannot be typed earlier</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.goes_home_page(java.lang.String)">
-                <span>Given "Admin" goes home page</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.clicks_account_menu(java.lang.String)">
-                <span>When "Admin" clicks account menu</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.clicks_sign_in(java.lang.String)">
-                <span>And "Admin" clicks sign in</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.LoginPageStepDefs.enters_in_username_field(java.lang.String,java.lang.String)">
-                <span>And "Admin" enters "admin_username" in username field</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.LoginPageStepDefs.enters_in_password_field(java.lang.String,java.lang.String)">
-                <span>And "Admin" enters "admin_password" in password field</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.LoginPageStepDefs.clicks_sign_in_submit_button(java.lang.String)">
-                <span>And "Admin" clicks sign in submit button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.clicks_items_titiles_menu(java.lang.String)">
-                <span>And "Admin" clicks items&titiles menu</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.clicks_room(java.lang.String)">
-                <span>And "Admin" clicks room</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.admin_clicks_create_a_new_room_button()">
-                <span>When "Admin"clicks create a new room button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.adminEntersInCreatedDateField(java.lang.String)">
-                <span>And Admin enters "12.12.2000 00:00" in Created Date field</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.adminVerifyEarlierDateCanTyped()">
-                <span>Then Admin verify earlier date can typed</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.admin_close_the_app()">
-                <span>And Admin close the app</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="126"><span class="badge log pass-bg mr-2">Pass</span>TC07 Admin can view all rooms with same items</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.goes_home_page(java.lang.String)">
-                <span>Given "Admin" goes home page</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.clicks_account_menu(java.lang.String)">
-                <span>When "Admin" clicks account menu</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.clicks_sign_in(java.lang.String)">
-                <span>And "Admin" clicks sign in</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.LoginPageStepDefs.enters_in_username_field(java.lang.String,java.lang.String)">
-                <span>And "Admin" enters "admin_username" in username field</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.LoginPageStepDefs.enters_in_password_field(java.lang.String,java.lang.String)">
-                <span>And "Admin" enters "admin_password" in password field</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.LoginPageStepDefs.clicks_sign_in_submit_button(java.lang.String)">
-                <span>And "Admin" clicks sign in submit button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.clicks_items_titiles_menu(java.lang.String)">
-                <span>And "Admin" clicks items&titiles menu</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.clicks_room(java.lang.String)">
-                <span>And "Admin" clicks room</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.verifyAllRoomsOnThePageHasHeader(java.lang.String,java.lang.String)">
-                <span>And "Admin" verify all rooms on the page has "Room Number" header</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.admin_close_the_app()">
-                <span>And Admin close the app</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="139"><span class="badge log pass-bg mr-2">Pass</span>TC08 Admin can edit(update) existing rooms</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.goes_home_page(java.lang.String)">
-                <span>Given "Admin" goes home page</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.clicks_account_menu(java.lang.String)">
-                <span>When "Admin" clicks account menu</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.clicks_sign_in(java.lang.String)">
-                <span>And "Admin" clicks sign in</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.LoginPageStepDefs.enters_in_username_field(java.lang.String,java.lang.String)">
-                <span>And "Admin" enters "admin_username" in username field</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.LoginPageStepDefs.enters_in_password_field(java.lang.String,java.lang.String)">
-                <span>And "Admin" enters "admin_password" in password field</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.LoginPageStepDefs.clicks_sign_in_submit_button(java.lang.String)">
-                <span>And "Admin" clicks sign in submit button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.clicks_items_titiles_menu(java.lang.String)">
-                <span>And "Admin" clicks items&titiles menu</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.HomePageStepDefs.clicks_room(java.lang.String)">
-                <span>And "Admin" clicks room</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.clicks_id_for_sort_list(java.lang.String)">
-                <span>And "Admin" clicks ID for sort list</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.admin_get_room_id()">
-                <span>And "Admin" get room id</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.clickEditButtonOfLastestRoom(java.lang.String)">
-                <span>And "Admin" click edit button of lastest room</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.change(java.lang.String,java.lang.String)">
-                <span>And "Admin" change "room_number"</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.admin_clicks_save_button()">
-                <span>And "Admin"clicks save button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.clicks_id_for_sort_list(java.lang.String)">
-                <span>And "Admin" clicks ID for sort list</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.RoomPageStepDefs.verify_from_rooms_page(java.lang.String,java.lang.String)">
-                <span>Then "Admin" verify "room_number" from Rooms Page</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.apiTestStepDefs.RoomApiStepDefs.verifyRoomNumberFromAPI(java.lang.String)">
-                <span>Then "Admin" verify roomNumber from API</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.databaseTestStepDefs.RoomDBStepDefs.verifyRoom_numberFromDB(java.lang.String)">
-                <span>Then "Admin" verify room_number from DB</span>
+              <div class="step pass-bg" title="stepdefinitions.UITestStepDefs.PhysiciansPageStepDefs.adminVerifyDeletion()">
+                <span>Then Admin verify deletion</span>
       <div>
       </div>
               </div>
@@ -1052,15 +370,15 @@ eventsCount: 5,
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>8</span>
+<span class='badge log pass-bg'>1</span>
 </span>
-<p class="name">@US17</p>
-<p class="duration text-sm">8 tests</p>
+<p class="name">@US19</p>
+<p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@US17</h4>
-<span status="pass" class='badge log pass-bg'>8 passed</span>
+<h4>@US19</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -1073,81 +391,11 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>13:43:38 PM</td>
+<td>13:21:21 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>TC01 User (Admin) can create new rooms for impatients</a>
+<a href="#" class="linked" test-id='1' id='2'>TC09 Admin can delete existing Physicians</a>
 <div class="">
-<span class="badge badge-default">Room creation / View / Update / Delete.TC01 User (Admin) can create new rooms for impatients</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>13:43:57 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='23'>TC02 there should be room number and room type</a>
-<div class="">
-<span class="badge badge-default">Room creation / View / Update / Delete.TC02 there should be room number and room type</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>13:44:15 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='49'>TC03 Current status can be set for the room</a>
-<div class="">
-<span class="badge badge-default">Room creation / View / Update / Delete.TC03 Current status can be set for the room</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>13:44:27 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='71'>TC04 Price can be added and cannot be blank</a>
-<div class="">
-<span class="badge badge-default">Room creation / View / Update / Delete.TC04 Price can be added and cannot be blank</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>13:44:44 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='92'>TC05 Description can be provided optionally</a>
-<div class="">
-<span class="badge badge-default">Room creation / View / Update / Delete.TC05 Description can be provided optionally</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>13:44:53 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='111'>TC06 Created date as MM/DAY/YEAR and cannot be typed earlier</a>
-<div class="">
-<span class="badge badge-default">Room creation / View / Update / Delete.TC06 Created date as MM/DAY/YEAR and cannot be typed earlier</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>13:45:16 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='126'>TC07 Admin can view all rooms with same items</a>
-<div class="">
-<span class="badge badge-default">Room creation / View / Update / Delete.TC07 Admin can view all rooms with same items</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>13:45:38 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='139'>TC08 Admin can edit(update) existing rooms</a>
-<div class="">
-<span class="badge badge-default">Room creation / View / Update / Delete.TC08 Admin can edit(update) existing rooms</span>
+<span class="badge badge-default">US19.TC09 Admin can delete existing Physicians</span>
 </div>
 </td>
 </tr>

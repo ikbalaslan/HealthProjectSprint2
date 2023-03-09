@@ -17,11 +17,10 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
-        tags = "@US17"
+        tags = "@US19"
 
 
 )
 public class Runner {
 
 }
-//tma

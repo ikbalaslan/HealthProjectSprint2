@@ -58,6 +58,7 @@ public class RoomPageStepDefs {
     @When("\"Admin\"clicks save button")
     public void admin_clicks_save_button() {
         JSUtils.clickElementByJS(roomsPage.saveButton);
+
     }
 
     @When("{string} clicks ID for sort list")
