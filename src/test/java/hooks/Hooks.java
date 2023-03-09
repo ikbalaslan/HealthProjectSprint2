@@ -27,7 +27,7 @@ Hooks is used to run before and after each SCENARIO or SCENARIO OUTLINE
     }
 
     @After
-    public void tearDownScenario(Scenario scenario){
+    public void tearDownScenario(Scenario scenario) throws InterruptedException {
 //        System.out.println("After Method");
         if (scenario.isFailed()){
             final byte[] failedScreenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
