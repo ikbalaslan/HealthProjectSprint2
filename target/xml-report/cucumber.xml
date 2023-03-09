@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testsuite name="Cucumber" time="48.096" tests="3" skipped="0" failures="1" errors="0">
 <testcase classname="Patient Login and Update Info" name="TC_01 Patient Login" time="8.103">
 <system-out><![CDATA[
@@ -73,6 +74,219 @@ And clicks on edit button to edit...........................................pass
 When clicks on status and changes "<status>"................................passed
 And clicks on Save button to save...........................................passed
 Then verify that status is changed..........................................failed
+=======
+<<<<<<< HEAD
+<testsuite name="Cucumber" time="12.609" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="US19" name="TC09 Admin can delete existing Physicians" time="12.394">
+=======
+<testsuite name="Cucumber" time="282.029" tests="6" skipped="0" failures="0" errors="0">
+<testcase classname="US_21 Admin can see and edit registered user's information" name="Admin can view registered user's information" time="61.301">
+>>>>>>> main
+<system-out><![CDATA[
+Given "Admin" goes to the homepage..........................................passed
+When "Admin" clicks on user icon............................................passed
+And "Admin" clicks on sign in button........................................passed
+And "Admin" enters "admin_username" in username field.......................passed
+And "Admin" enters "admin_password" in password field.......................passed
+<<<<<<< HEAD
+And "Admin" clicks sign in submit button....................................passed
+And "Admin" clicks items&titiles menu.......................................passed
+And "Admin" clicks Physician................................................passed
+When "Admin" clicks ID for sort list........................................passed
+When Admin clicks delete button.............................................passed
+And Admin confirm deletion..................................................passed
+Then Admin verify deletion..................................................passed
+And Admin close the app.....................................................passed
+=======
+And "Admin" clicks on sign in submit button.................................passed
+Then Admin clicks on administration option..................................passed
+And Admin clicks on user management option..................................passed
+And "Admin" clicks on "Create New User" option..............................passed
+And "Admin" enters "Username" into Username input field.....................passed
+And "Admin" enters "First Name" into First Name input field.................passed
+And "Admin" enters "Last Name" into Last Name input field...................passed
+And "Admin" enters "Email" into Email input field...........................passed
+And "Admin" enters "SSN" into SSN input field...............................passed
+And "Admin" clicks on Save button...........................................passed
+Then Verify the success message appears.....................................passed
+When "Admin" sorts the page by ID in Descending order.......................passed
+And "Admin" clicks on any id from among the registered users................passed
+Then "Admin" can see "login" of that registered user........................passed
+Then verify login name of that registered user..............................passed
+And Admin can see firstname of that registered user.........................passed
+Then verify firstName box contains valid first name of that user............passed
+And Admin can see the "lastname" of that registered user....................passed
+Then verify lastName box contains valid last name of that user..............passed
+And "Admin" can seee "email" of that registered user........................passed
+Then verify email box contains valid email of that user.....................passed
+And Admin can see "createdBy" for that user.................................passed
+Then verify createdBy box contains valid information for that user..........passed
+And "Admin" can see "modifiedBy" for that user..............................passed
+Then verify modifiedBy box contains valid information for that user.........passed
+And "Admin" see "profile" of that user......................................passed
+Then "Admin" goes back to the user management page..........................passed
+And "Admin" sorts the page by ID in Descending order........................passed
+Then "Admin" deletes that registered user...................................passed
+And "Admin" confirms the delete option......................................passed
+And "Admin" verify that user is deleted.....................................passed
+And "Admin" closes the app..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US_21 Admin can see and edit registered user's information" name="Admin can assign PHYSICIAN role to a registered user and delete it as well" time="44.048">
+<system-out><![CDATA[
+Given "Admin" goes to the homepage..........................................passed
+When "Admin" clicks on user icon............................................passed
+And "Admin" clicks on sign in button........................................passed
+And "Admin" enters "admin_username" in username field.......................passed
+And "Admin" enters "admin_password" in password field.......................passed
+And "Admin" clicks on sign in submit button.................................passed
+Then Admin clicks on administration option..................................passed
+And Admin clicks on user management option..................................passed
+And "Admin" clicks on "Create New User" option..............................passed
+And "Admin" enters "Username" into Username input field.....................passed
+And "Admin" enters "First Name" into First Name input field.................passed
+And "Admin" enters "Last Name" into Last Name input field...................passed
+And "Admin" enters "Email" into Email input field...........................passed
+And "Admin" enters "SSN" into SSN input field...............................passed
+And "Admin" clicks on Save button...........................................passed
+Then Verify the success message appears.....................................passed
+When "Admin" sorts the page by ID in Descending order.......................passed
+And "Admin" clicks on edit button of any registered user....................passed
+And "Admin" selects "ROLE_PHYSICIAN" from profiles..........................passed
+And "Admin" sorts the page by ID descending order...........................passed
+Then "Admin" verify user registration status is Activated...................passed
+And "Admin" verify user profile as "ROLE_PHYSICIAN".........................passed
+And "Admin" sorts the page by ID in Descending order........................passed
+Then "Admin" deletes that registered user...................................passed
+And "Admin" confirms the delete option......................................passed
+And "Admin" verify that user is deleted.....................................passed
+And "Admin" closes the app..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US_21 Admin can see and edit registered user's information" name="Admin can assign STAFF role to a registered user and delete it as well" time="43.689">
+<system-out><![CDATA[
+Given "Admin" goes to the homepage..........................................passed
+When "Admin" clicks on user icon............................................passed
+And "Admin" clicks on sign in button........................................passed
+And "Admin" enters "admin_username" in username field.......................passed
+And "Admin" enters "admin_password" in password field.......................passed
+And "Admin" clicks on sign in submit button.................................passed
+Then Admin clicks on administration option..................................passed
+And Admin clicks on user management option..................................passed
+And "Admin" clicks on "Create New User" option..............................passed
+And "Admin" enters "Username" into Username input field.....................passed
+And "Admin" enters "First Name" into First Name input field.................passed
+And "Admin" enters "Last Name" into Last Name input field...................passed
+And "Admin" enters "Email" into Email input field...........................passed
+And "Admin" enters "SSN" into SSN input field...............................passed
+And "Admin" clicks on Save button...........................................passed
+Then Verify the success message appears.....................................passed
+When "Admin" sorts the page by ID in Descending order.......................passed
+And "Admin" clicks on edit button of any registered user....................passed
+And "Admin" selects "ROLE_STAFF" from profiles..............................passed
+And "Admin" sorts the page by ID descending order...........................passed
+Then "Admin" verify user registration status is Activated...................passed
+And "Admin" verify user profile as "ROLE_STAFF".............................passed
+And "Admin" sorts the page by ID in Descending order........................passed
+Then "Admin" deletes that registered user...................................passed
+And "Admin" confirms the delete option......................................passed
+And "Admin" verify that user is deleted.....................................passed
+And "Admin" closes the app..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US_21 Admin can see and edit registered user's information" name="Admin can assign ADMIN role to a registered user and delete it as well" time="44.595">
+<system-out><![CDATA[
+Given "Admin" goes to the homepage..........................................passed
+When "Admin" clicks on user icon............................................passed
+And "Admin" clicks on sign in button........................................passed
+And "Admin" enters "admin_username" in username field.......................passed
+And "Admin" enters "admin_password" in password field.......................passed
+And "Admin" clicks on sign in submit button.................................passed
+Then Admin clicks on administration option..................................passed
+And Admin clicks on user management option..................................passed
+And "Admin" clicks on "Create New User" option..............................passed
+And "Admin" enters "Username" into Username input field.....................passed
+And "Admin" enters "First Name" into First Name input field.................passed
+And "Admin" enters "Last Name" into Last Name input field...................passed
+And "Admin" enters "Email" into Email input field...........................passed
+And "Admin" enters "SSN" into SSN input field...............................passed
+And "Admin" clicks on Save button...........................................passed
+Then Verify the success message appears.....................................passed
+When "Admin" sorts the page by ID in Descending order.......................passed
+And "Admin" clicks on edit button of any registered user....................passed
+And "Admin" selects "ROLE_ADMIN" from profiles..............................passed
+And "Admin" sorts the page by ID descending order...........................passed
+Then "Admin" verify user registration status is Activated...................passed
+And "Admin" verify user profile as "ROLE_ADMIN".............................passed
+And "Admin" sorts the page by ID in Descending order........................passed
+Then "Admin" deletes that registered user...................................passed
+And "Admin" confirms the delete option......................................passed
+And "Admin" verify that user is deleted.....................................passed
+And "Admin" closes the app..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US_21 Admin can see and edit registered user's information" name="Admin can assign USER role to a registered user and delete it as well" time="43.694">
+<system-out><![CDATA[
+Given "Admin" goes to the homepage..........................................passed
+When "Admin" clicks on user icon............................................passed
+And "Admin" clicks on sign in button........................................passed
+And "Admin" enters "admin_username" in username field.......................passed
+And "Admin" enters "admin_password" in password field.......................passed
+And "Admin" clicks on sign in submit button.................................passed
+Then Admin clicks on administration option..................................passed
+And Admin clicks on user management option..................................passed
+And "Admin" clicks on "Create New User" option..............................passed
+And "Admin" enters "Username" into Username input field.....................passed
+And "Admin" enters "First Name" into First Name input field.................passed
+And "Admin" enters "Last Name" into Last Name input field...................passed
+And "Admin" enters "Email" into Email input field...........................passed
+And "Admin" enters "SSN" into SSN input field...............................passed
+And "Admin" clicks on Save button...........................................passed
+Then Verify the success message appears.....................................passed
+When "Admin" sorts the page by ID in Descending order.......................passed
+And "Admin" clicks on edit button of any registered user....................passed
+And "Admin" selects "ROLE_USER" from profiles...............................passed
+And "Admin" sorts the page by ID descending order...........................passed
+Then "Admin" verify user registration status is Activated...................passed
+And "Admin" verify user profile as "ROLE_USER"..............................passed
+And "Admin" sorts the page by ID in Descending order........................passed
+Then "Admin" deletes that registered user...................................passed
+And "Admin" confirms the delete option......................................passed
+And "Admin" verify that user is deleted.....................................passed
+And "Admin" closes the app..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US_21 Admin can see and edit registered user's information" name="Admin can assign PATIENT role to a registered user and delete it as well" time="44.305">
+<system-out><![CDATA[
+Given "Admin" goes to the homepage..........................................passed
+When "Admin" clicks on user icon............................................passed
+And "Admin" clicks on sign in button........................................passed
+And "Admin" enters "admin_username" in username field.......................passed
+And "Admin" enters "admin_password" in password field.......................passed
+And "Admin" clicks on sign in submit button.................................passed
+Then Admin clicks on administration option..................................passed
+And Admin clicks on user management option..................................passed
+And "Admin" clicks on "Create New User" option..............................passed
+And "Admin" enters "Username" into Username input field.....................passed
+And "Admin" enters "First Name" into First Name input field.................passed
+And "Admin" enters "Last Name" into Last Name input field...................passed
+And "Admin" enters "Email" into Email input field...........................passed
+And "Admin" enters "SSN" into SSN input field...............................passed
+And "Admin" clicks on Save button...........................................passed
+Then Verify the success message appears.....................................passed
+When "Admin" sorts the page by ID in Descending order.......................passed
+And "Admin" clicks on edit button of any registered user....................passed
+And "Admin" selects "ROLE_PATIENT" from profiles............................passed
+And "Admin" sorts the page by ID descending order...........................passed
+Then "Admin" verify user registration status is Activated...................passed
+And "Admin" verify user profile as "ROLE_PATIENT"...........................passed
+And "Admin" sorts the page by ID in Descending order........................passed
+Then "Admin" deletes that registered user...................................passed
+And "Admin" confirms the delete option......................................passed
+And "Admin" verify that user is deleted.....................................passed
+And "Admin" closes the app..................................................passed
+>>>>>>> main
+>>>>>>> main
 ]]></system-out>
 </testcase>
 </testsuite>

@@ -98,4 +98,11 @@ public class JSUtils {
         return value;
     }
 
+    //Scroll into view with JS. THIS IS VERY USEFULL
+//    JSUtils.scrollIntoViewJS(driver.findElement(By.id("submit-button")));
+    public static void scrollIntoViewJS(WebElement element) {
+        JavascriptExecutor jsexecutor = ((JavascriptExecutor) Driver.getDriver());
+        jsexecutor.executeScript("arguments[0].scrollIntoView(true);", element);
+    }
+
 }
