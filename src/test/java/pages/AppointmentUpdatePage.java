@@ -36,4 +36,8 @@ public class AppointmentUpdatePage {
     @FindBy(id="save-entity")
     public WebElement saveButton;
 
+    @FindBy(xpath="//div[@role='alert']")
+    public WebElement successMessage;
+
+
 }

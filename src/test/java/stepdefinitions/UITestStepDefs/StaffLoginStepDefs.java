@@ -9,8 +9,8 @@ public class StaffLoginStepDefs {
 
     StaffLoginPage staffLoginPage=new StaffLoginPage();
 
-    @Given("patient is on {string} page")
-    public void patient_is_on_page(String string) {
+    @Given("staff is on {string} page")
+    public void staff_is_on_page(String url) {
         Driver.getDriver().get(ConfigReader.getProperty("app_url"));
     }
 

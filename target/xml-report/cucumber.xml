@@ -1,17 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="0.518" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="Patient Login and Update Info" name="Appointment update" time="0.153">
-<failure/>
+<testsuite name="Cucumber" time="48.096" tests="3" skipped="0" failures="1" errors="0">
+<testcase classname="Patient Login and Update Info" name="TC_01 Patient Login" time="8.103">
 <system-out><![CDATA[
-When staff clicks on "MY PAGES" icon........................................undefined
-And clicks on Search Patient icon...........................................skipped
-And enters SSN into Patient "SSN" into SSN text box.........................skipped
-And clicks on Show Appointments button......................................skipped
-And clicks on edit button...................................................skipped
-And sets new startdateTime for appointment..................................skipped
-And sets new endDateTime for appointment....................................skipped
-And clicks on Save button to save...........................................skipped
-Then verify that appointment is updated.....................................skipped
+Given staff is on "https://medunna.com/" page...............................passed
+When click on user icon.....................................................passed
+And click on Sign In option.................................................passed
+And enter "matt" in Username input..........................................passed
+And enter "4004Hakan" in Password input.....................................passed
+And click on Remember Me checkbox...........................................passed
+And click on Sign In submit button..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Patient Login and Update Info" name="Appointment update" time="16.948">
+<system-out><![CDATA[
+When staff clicks on MY PAGES icon..........................................passed
+And clicks on Search Patient icon...........................................passed
+And enters SSN into Patient "SSN" into SSN text box.........................passed
+And clicks on Show Appointments button......................................passed
+And clicks on edit button to edit...........................................passed
+And sets new "startdateTime" for appointment................................passed
+And sets new endDateTime in "endDateTime" field for appointment.............passed
+And clicks on Save button to save...........................................passed
+Then verify that appointment is updated.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Patient Login and Update Info" name="Status Change" time="22.749">
+<failure type="org.openqa.selenium.NoSuchElementException" message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.\/\/div\[\@class\=\'Toastify__toast\-body\'\]&quot;}
+  (Session info: chrome=110.0.5481.178)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.7.1', revision: 'c6795baf1a3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b2024c286a67f2195e5e0167ac2a3239, findElement {using=class name, value=//div[@class='Toastify__toast-body']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\yayte\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61857}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61857/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b2024c286a67f2195e5e0167ac2a3239">
+<![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".\/\/div\[\@class\=\'Toastify__toast\-body\'\]"}
+  (Session info: chrome=110.0.5481.178)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.7.1', revision: 'c6795baf1a3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b2024c286a67f2195e5e0167ac2a3239, findElement {using=class name, value=//div[@class='Toastify__toast-body']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\yayte\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61857}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61857/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b2024c286a67f2195e5e0167ac2a3239
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:551)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.isDisplayed(Unknown Source)
+	at stepdefinitions.UITestStepDefs.AppointmentStatusStepDefs.verify_that_status_is_changed(AppointmentStatusStepDefs.java:30)
+	at ✽.verify that status is changed(file:///C:/Users/yayte/IdeaProjects/HealthProjectSprint2/./src/test/resources/features/US22.feature:35)
+]]>
+</failure>
+<system-out><![CDATA[
+When staff clicks on MY PAGES icon..........................................passed
+And clicks on Search Patient icon...........................................passed
+And enters SSN into Patient "SSN" into SSN text box.........................passed
+And clicks on Show Appointments button......................................passed
+And clicks on edit button to edit...........................................passed
+When clicks on status and changes "<status>"................................passed
+And clicks on Save button to save...........................................passed
+Then verify that status is changed..........................................failed
 ]]></system-out>
 </testcase>
 </testsuite>

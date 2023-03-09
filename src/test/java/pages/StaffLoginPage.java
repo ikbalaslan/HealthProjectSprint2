@@ -27,7 +27,7 @@ public class StaffLoginPage{
     @FindBy(id = "rememberMe")
     public WebElement rememberMeCheckbox;
 
-    @FindBy(xpath = " //button[@type='submit']")
+    @FindBy(xpath = "//button[@type='submit']")
     public WebElement signInSubmitButton;
 
 

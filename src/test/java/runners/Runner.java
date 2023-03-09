@@ -16,8 +16,8 @@ import org.junit.runner.RunWith;
         monochrome = true,
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
-        dryRun = true,
-        tags = "@appointment_update"
+        dryRun = false,
+        tags = "@staff_account"
 
 
 )
