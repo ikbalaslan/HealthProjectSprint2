@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="11.49" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Room Creation by API" name="User should create room with API" time="10.972">
-<system-out><![CDATA[
-When User makes POST request................................................passed
-Then Validate room creation by using API....................................passed
-]]></system-out>
-</testcase>
-</testsuite>
