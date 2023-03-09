@@ -9,12 +9,11 @@ import utilities.Driver;
 public class AdminPage {
 
     public AdminPage() {
-        PageFactory.initElements(Driver.getDriver(),this);
+        PageFactory.initElements(Driver.getDriver(), this);
     }
+            @FindBy(id = "admin-menu")
+            public WebElement adminMenuDropDown;
+            @FindBy(xpath = "//span[.='User management']")
+            public WebElement userManagement;
 
-    @FindBy(id = "admin-menu")
-    public WebElement adminMenuDropDown;
-
-    @FindBy(xpath = "//span[.='User management']")
-    public WebElement userManagement;
-}
+    }
