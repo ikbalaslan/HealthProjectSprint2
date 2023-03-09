@@ -22,6 +22,9 @@ public class HomePage {
     @FindBy(xpath = "//span[.='Room']")
     public WebElement roomOption;
 
+    @FindBy(xpath = "//span[.='Physician']")
+    public WebElement physicianOption;
+
     @FindBy(xpath = "//*[.='Sign in']")
     public WebElement signInOptionButton;
 

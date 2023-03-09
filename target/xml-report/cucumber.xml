@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<testsuite name="Cucumber" time="12.609" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="US19" name="TC09 Admin can delete existing Physicians" time="12.394">
+=======
 <testsuite name="Cucumber" time="282.029" tests="6" skipped="0" failures="0" errors="0">
 <testcase classname="US_21 Admin can see and edit registered user's information" name="Admin can view registered user's information" time="61.301">
+>>>>>>> main
 <system-out><![CDATA[
 Given "Admin" goes to the homepage..........................................passed
 When "Admin" clicks on user icon............................................passed
 And "Admin" clicks on sign in button........................................passed
 And "Admin" enters "admin_username" in username field.......................passed
 And "Admin" enters "admin_password" in password field.......................passed
+<<<<<<< HEAD
+And "Admin" clicks sign in submit button....................................passed
+And "Admin" clicks items&titiles menu.......................................passed
+And "Admin" clicks Physician................................................passed
+When "Admin" clicks ID for sort list........................................passed
+When Admin clicks delete button.............................................passed
+And Admin confirm deletion..................................................passed
+Then Admin verify deletion..................................................passed
+And Admin close the app.....................................................passed
+=======
 And "Admin" clicks on sign in submit button.................................passed
 Then Admin clicks on administration option..................................passed
 And Admin clicks on user management option..................................passed
@@ -194,6 +209,7 @@ Then "Admin" deletes that registered user...................................pass
 And "Admin" confirms the delete option......................................passed
 And "Admin" verify that user is deleted.....................................passed
 And "Admin" closes the app..................................................passed
+>>>>>>> main
 ]]></system-out>
 </testcase>
 </testsuite>

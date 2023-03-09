@@ -1,5 +1,6 @@
 package stepdefinitions.UITestStepDefs;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -59,6 +60,5 @@ public class HomePageStepDefs {
     public void admin_close_the_app() {
         Driver.closeDriver();
     }
-
 
 }
