@@ -9,7 +9,6 @@ import static utilities.AuthenticationMedunna.generateToken;
 public class MedunnaBaseUrl {
     public static RequestSpecification spec;
 
-
     public static void medunnaSetUp2(){
         spec = new RequestSpecBuilder().
                 setBaseUri(ConfigReader.getProperty("medunna_api_url")).
