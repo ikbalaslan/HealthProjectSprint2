@@ -1,4 +1,4 @@
-@Room_Manipulation
+@API_test
 Feature: Room Creation by API
   @US30_TC01
   Scenario: User should create room with API
