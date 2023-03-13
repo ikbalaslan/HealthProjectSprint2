@@ -124,6 +124,7 @@ public class DBUtils {
      *         be returned. The rest of the data will be ignored
      */
     public static List<Object> getRowList(String query) {
+
         return getQueryResultList(query).get(0);
     }
     /**

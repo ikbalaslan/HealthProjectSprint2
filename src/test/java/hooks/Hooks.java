@@ -54,7 +54,6 @@ public class Hooks {
     @Before("@API_Tests")
     public void beforeApi2(){  // This method will run before Api TestS
         medunnaSetUp2();
-
     }
 
 }

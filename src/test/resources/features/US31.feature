@@ -6,3 +6,7 @@ Feature: Doctors List Validation
     Given "Admin" sends GET request for physicians list
     Then HTTP status code must be 200
     Then Assert that "Admin" can see all physicians list
+
+
+
+
