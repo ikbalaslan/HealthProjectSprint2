@@ -130,9 +130,9 @@ public class StaffPage {
     public WebElement saveSumitButtonEdit;
 
     // ****************** xsxss USER DELETE
-    @FindBy(xpath = "//tr[@id='xsxss']")
+    @FindBy(xpath = "//tr[@id='weekend-staff']")
     public WebElement myUser1;
-    @FindBy(xpath = "//tr[@id='xsxss']/td[11]/div/a[3]")
+    @FindBy(xpath = "//tr[@id='weekend-staff']/td[11]/div/a[3]")
     public WebElement myUser1Delete;
 
     // *********** MY USERS THAT CAN BE DELETED

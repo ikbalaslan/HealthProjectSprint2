@@ -1,12 +1,14 @@
-package stepdefinitions;
+package stepdefinitions.UITestStepDefs;
 
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import pages.StaffPage;
+import utilities.Driver;
 import utilities.JSUtils;
 import utilities.ReusableMethods;
 import static org.junit.Assert.*;
@@ -60,7 +62,11 @@ public class StaffPageStepDefs {
     @Then("Verify that message User found with search SSN pops up")
     public void verifyThatMessageUserFoundWithSearchSSNPopsUp() {
         ReusableMethods.waitFor(2);
-        assertTrue(staffPage.toesterContainerMessageSearch.isDisplayed());
+        String toester =  staffPage.toesterContainerMessageSearch.getText();
+        System.out.println(toester);
+        ReusableMethods.waitFor(5);
+       assertEquals("User found with search SSN",toester);
+//       assertTrue(staffPage.toesterContainerMessageSearch.isDisplayed());
     }
 
 
@@ -217,7 +223,7 @@ public class StaffPageStepDefs {
         Assert.assertTrue(staffPage.toesterContMssgCreation.isDisplayed());
     }
 
-    ///  ************ DELETING the Staff by Admin
+    ///  ************ DELETING STAFF BY ADMIN
 
 
     @And("Admin clicks on the delete button")
@@ -271,14 +277,14 @@ public class StaffPageStepDefs {
     }
     @Then("Admin clicks on the view button to see user's account")
     public void admin_clicks_on_the_view_button_to_see_user_s_account() {
-        ReusableMethods.waitFor(5);
         JSUtils.clickElementByJS(staffPage.myUserViewButton);
+        ReusableMethods.waitFor(5);
     }
-    //********************** EDIT
+    //********************** ADMIN EDITS USER'S ACCOUNT
     @And("Admin clicks on the edit button to see user's account")
     public void adminClicksOnTheEditButtonToSeeUserSAccount() {
-        ReusableMethods.waitFor(3);
         JSUtils.clickElementByJS(staffPage.myUserEditButton);
+        ReusableMethods.waitFor(5);
 
     }
     @And("Admin types {string} into SSN field in Edit Page")
@@ -296,5 +302,15 @@ public class StaffPageStepDefs {
         ReusableMethods.waitFor(3);
         assertTrue(actualLogin.contains(ssn));
     }
+
+    @And("Admin is able to see user's page")
+    public void adminIsAbleToSeeUserSPage() {
+       String currentUrl = Driver.getDriver().getCurrentUrl();
+        System.out.println(currentUrl);
+        String expectedUrl ="https://www.medunna.com/admin/user-management/etta-team02";
+       ReusableMethods.waitFor(3);
+       Assert.assertEquals(expectedUrl,currentUrl);
+    }
+
 
 }

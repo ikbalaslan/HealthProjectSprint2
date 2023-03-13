@@ -9,49 +9,48 @@ Feature: Health_Project_US20
     And "Admin" enters "admin_password" in password field
     And "Admin" clicks sign in submit button
 
-  @registration
-  Scenario Outline:TC_01_Registration
-    When User clicks on "User Icon" in the top right corner
-    And User clicks on Register from drop down menu
-    And User enters the "<SSN>" into SSN input field
-    And User enters the "<First Name>" into First Name input field
-    And User enters the "<Last Name>" into Last Name input field
-    And User enters the "<Username>" into Username input field
-    And User enters the "<Email>" into Email input field
-    And User enters the "<password>" into New Password input field
-    And User enters the "<second password>" into New Password Confirmation input field
-    And User clicks on Register submit button
-    Then Verify that success message appears
-    And User closes the application
-    Examples:
-#    | SSN         | First Name    | Last Name | Username      | Email               | password | second password |
-#    | 443-11-4336 | Adele01-staff | Watson    | adele01team02 | adeline02@gmail.com | Adele1!  | Adele1!         |
-#    | 443-22-4336 | Adele02-staff | Watson    | adele02team02 | adeline02@gmail.com | Adele1!  | Adele1!         |
-#    | 443-33-4446 | Adele03-staff | Watson    | adele03team02 | adeline03@gmail.com | Adele1!  | Adele1!         |
+#     ******* THESE ARE JUST FOR REGISTRATION AND ACTIVATING USER
 
-  @admin
-  Scenario:TC02_activate_registered_user
-    Then Admin clicks administration dropdown
-    And Admin click user management button
-    Then Admin sort page by ID descending order
-    And Admin click edit button of last registered user
-    And Admin click Activated checkbox
-    And Admin select "ROLE_STAFF" from profiles
-    And Admin click save button
-    And Admin sort page by ID descending order
-    Then Admin verify user registration status Activated
-    Then Admin verify user profiles "ROLE_STAFF"
-    Then Admin close the app
+#  @registration
+#  Scenario Outline:TC_01_Registration
+#    When User clicks on "User Icon" in the top right corner
+#    And User clicks on Register from drop down menu
+#    And User enters the "<SSN>" into SSN input field
+#    And User enters the "<First Name>" into First Name input field
+#    And User enters the "<Last Name>" into Last Name input field
+#    And User enters the "<Username>" into Username input field
+#    And User enters the "<Email>" into Email input field
+#    And User enters the "<password>" into New Password input field
+#    And User enters the "<second password>" into New Password Confirmation input field
+#    And User clicks on Register submit button
+#    Then Verify that success message appears
+#    And User closes the application
+#    Examples:
+##    | SSN         | First Name    | Last Name | Username      | Email               | password | second password |
+##    | 443-11-4336 | Adele01-staff | Watson    | adele01team02 | adeline02@gmail.com | Adele1!  | Adele1!         |
+##    | 443-22-4336 | Adele02-staff | Watson    | adele02team02 | adeline02@gmail.com | Adele1!  | Adele1!         |
+##    | 443-33-4446 | Adele03-staff | Watson    | adele03team02 | adeline03@gmail.com | Adele1!  | Adele1!         |
+#
+#  @admin
+#  Scenario:TC02_activate_registered_user
+#    Then Admin clicks administration dropdown
+#    And Admin click user management button
+#    Then Admin sort page by ID descending order
+#    And Admin click edit button of last registered user
+#    And Admin click Activated checkbox
+#    And Admin select "ROLE_STAFF" from profiles
+#    And Admin click save button
+#    And Admin sort page by ID descending order
+#    Then Admin verify user registration status Activated
+#    Then Admin verify user profiles "ROLE_STAFF"
+#    Then Admin close the app
 
 
-
+  @admin_searches_staff_by_SSN_03
   Scenario Outline:TC03_admin_searches_staff_by_SSN
-    Then Admin clicks administration dropdown
-    And Admin click user management button
     And Admin clicks on Items&Titles dropdown
     And Admin clicks on Staff from the dropdown
     And Admin clicks on Create A New Staff Button
-    And Admin clicks on User Search checkbox
     And Admin types "<SSN>" into SSN field in New Staff Page
     And Admin clicks on Search User button
     Then Verify that message User found with search SSN pops up
@@ -61,7 +60,7 @@ Feature: Health_Project_US20
       | 443-11-4336 |
 
 
-  @staff_search_and_info_populated
+  @staff_search_and_info_populated_04
   Scenario Outline:TC04_staff_search_and_check_info_populated
     And Admin clicks on Items&Titles dropdown
     And Admin clicks on Staff from the dropdown
@@ -96,14 +95,15 @@ Feature: Health_Project_US20
     And Admin sorts page by created date
     And Admin selects a "<login>" of registered user
     And Admin clicks on the view button to see user's account
+    And Admin is able to see user's page
     Then Admin close the app
     Examples:
-      | login |
+      | login       |
       | etta-team02 |
 
 
   @admin_edits_staff_account_06
-  Scenario Outline:TC05_admin_edits_registered_user
+  Scenario Outline:TC06_admin_edits_registered_user
     Then Admin clicks administration dropdown
     And Admin click user management button
     And Admin sorts page by created date
@@ -117,14 +117,12 @@ Feature: Health_Project_US20
     Then Admin close the app
     Examples:
       | login       | SSN         |
-      | etta-team02 | 765-70-0907 |
+      | etta-team02 | 765-70-0905 |
 
 
-#  //tbody//td[13]
 
-
-  @admin_create_new_staff05
-  Scenario Outline:TC06_admin_edits_registered_user
+  @admin_create_new_staff07
+  Scenario Outline:TC07_admin_edits_registered_user
     Then Admin clicks administration dropdown
     And Admin click user management button
     And Admin clicks on Create a new user link
@@ -143,8 +141,8 @@ Feature: Health_Project_US20
       | etna-team02 | Etna  | Watson | etna@gmail.com | 345-70-9378 |
 
 
-  @admin_delete_staff10
-  Scenario Outline:TC07_admin_edits_registered_user
+  @admin_delete_staff08
+  Scenario Outline:TC08_admin_edits_registered_user
     Then Admin clicks administration dropdown
     And Admin click user management button
     And Admin sorts page by created date
@@ -156,5 +154,15 @@ Feature: Health_Project_US20
     Then Verify that message delete is successful appears
     Then Admin close the app
     Examples:
-      | login |
-      | xsxss |
+      | login         |
+      | weekend-staff|
+#      |Emina03-staff|
+
+#    ********* DON'T FORGET TO PUT THIS LOGIN IN THE XPATH
+#  // *********** MY USERS THAT CAN BE DELETED
+ # //  sdsdvv
+ #   etta-team02
+#   Emina03-staff
+#
+
+
