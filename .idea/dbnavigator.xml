@@ -13,7 +13,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="005404e5-42ba-4794-8492-b30accb473d8">
-      <console name="Connection" type="STANDARD" schema="medunna_db_v2" session="Main"><![CDATA[select * from "public".staff where id = 21596;]]></console>
+      <console name="Connection" type="STANDARD" schema="medunna_db_v2" session="Main"><![CDATA[select * from "public".staff]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">

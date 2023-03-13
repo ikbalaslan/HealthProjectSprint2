@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
@@ -89,6 +90,9 @@ public class StaffPage {
     public WebElement authoritiesField;
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement saveSubmitButtonUserMan;
+
+    @FindBy(xpath = "//span[.='ID']")
+    public WebElement idButtonStaff;
     @FindBy(xpath = "//div[@class='Toastify__toast-body']")
     public WebElement toesterContMssgCreation;
     @FindBy(xpath = "//div[@class='Toastify__toast-body']")
@@ -112,14 +116,34 @@ public class StaffPage {
     public WebElement toesterContMssgEdit;
 
 
+    // ***********************  STAFF PAGE
+
+    @FindBy(xpath = "//tbody/tr[5]/td[12]")
+    public WebElement userStaffEmma;
+
+    @FindBy(xpath = "//tbody/tr[6]/td[12]")
+    public WebElement userStaffAdele;
+
+
 // *********************** ADMIN SELECTS/VIEWS USER'S ACCOUNT  ************
 
-    @FindBy(xpath = "//tr[@id='etta-team02']/td[11]/div/a[1]")
+    @FindBy(xpath = "//dd[.='Zdravo bili gdje god bili !']")
+    public WebElement editedDescriptionEmma;
+    @FindBy(xpath = "//tr[@id='tajra-staff02']/td[11]/div/a[1]")
     public WebElement myUserViewButton;
-    @FindBy(xpath = "//tr[@id='etta-team02']")
+    @FindBy(xpath = "//tbody/tr[5]/td[12]")
     public WebElement myUser;
-    @FindBy(xpath = "//tr[@id='etta-team02']/td[11]/div/a[2]")
+    @FindBy(xpath = "//tr['emmateam02']/td[11]/div/a[2]")
     public WebElement myUserEditButton;
+
+    @FindBy(xpath = "//tbody/tr[5]/td[15]/div/a[2]")
+    public WebElement editBUttonStaffPageEmma;
+
+    @FindBy(xpath = "//tbody/tr[5]/td[15]/div/a[1]")   //  adele01team02
+    public WebElement viewBUttonStaffEmma;
+
+    @FindBy(xpath = "//tbody/tr[6]/td[15]/div/a[3]")
+    public WebElement deleteBUttonStaffAdele;
     @FindBy(xpath = "//tr[@id='etta-team02']/td[11]/div/a[3]")
     public WebElement myUserDeleteButton;
     @FindBy(xpath = "//input[@name='ssn']")
@@ -129,10 +153,12 @@ public class StaffPage {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement saveSumitButtonEdit;
 
-    // ****************** xsxss USER DELETE
-    @FindBy(xpath = "//tr[@id='weekend-staff']")
+    // ****************** xsxss USEr DELETE
+
+
+    @FindBy(xpath = "//tr[@id='xsxss']")
     public WebElement myUser1;
-    @FindBy(xpath = "//tr[@id='weekend-staff']/td[11]/div/a[3]")
+    @FindBy(xpath = "//tr[@id='xsxss']/td[11]/div/a[3]")
     public WebElement myUser1Delete;
 
     // *********** MY USERS THAT CAN BE DELETED
@@ -140,44 +166,8 @@ public class StaffPage {
     //etta-team02
 
 
+    //******************* STAFF DELETE
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy(id ="jhi-confirm-delete-staff")
+    public WebElement deleteStaffPopup;
 }

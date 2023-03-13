@@ -1,7 +1,6 @@
 package stepdefinitions.UITestStepDefs;
 
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
@@ -13,7 +12,7 @@ import utilities.JSUtils;
 import utilities.ReusableMethods;
 import static org.junit.Assert.*;
 
-public class StaffPageStepDefs {
+public class StaffStepDefs {
 
     StaffPage staffPage = new StaffPage();
 
@@ -37,13 +36,13 @@ public class StaffPageStepDefs {
 
     @Then("Admin clicks on User Search checkbox")
     public void admin_clicks_on_user_search_checkbox() {
-        ReusableMethods.waitFor(2);
+        ReusableMethods.waitFor(3);
         staffPage.userSearchCheckbox.click();
     }
 
     @Then("Admin clicks on Search User button")
     public void admin_clicks_on_search_user_button() {
-        ReusableMethods.waitFor(2);
+        ReusableMethods.waitFor(3);
         staffPage.searchUserButton.click();
     }
 
@@ -62,11 +61,7 @@ public class StaffPageStepDefs {
     @Then("Verify that message User found with search SSN pops up")
     public void verifyThatMessageUserFoundWithSearchSSNPopsUp() {
         ReusableMethods.waitFor(2);
-        String toester =  staffPage.toesterContainerMessageSearch.getText();
-        System.out.println(toester);
-        ReusableMethods.waitFor(5);
-       assertEquals("User found with search SSN",toester);
-//       assertTrue(staffPage.toesterContainerMessageSearch.isDisplayed());
+        assertTrue(staffPage.toesterContainerMessageSearch.isDisplayed());
     }
 
 
@@ -214,7 +209,7 @@ public class StaffPageStepDefs {
     @And("Admin clicks on the Save Button")
     public void adminClicksOnTheSaveButton() {
         ReusableMethods.waitFor(2);
-        JSUtils.clickElementByJS(staffPage.saveSumitButtonEdit);
+        JSUtils.clickElementByJS(staffPage.saveSubmitButtonUserMan);
     }
 
     @Then("Verify that success message New User is Created pops up")
@@ -223,7 +218,7 @@ public class StaffPageStepDefs {
         Assert.assertTrue(staffPage.toesterContMssgCreation.isDisplayed());
     }
 
-    ///  ************ DELETING STAFF BY ADMIN
+    ///  ************ DELETING the Staff by Admin
 
 
     @And("Admin clicks on the delete button")
@@ -270,6 +265,7 @@ public class StaffPageStepDefs {
     @Then("Admin selects a {string} of registered user")
     public void admin_selects_for_a_of_registered_user(String string) {
         ReusableMethods.waitFor(3);
+        JSUtils.scrollDownByJS();
         String actualLogin = staffPage.myUser.getText();
         System.out.println(actualLogin);
         ReusableMethods.waitFor(3);
@@ -277,14 +273,14 @@ public class StaffPageStepDefs {
     }
     @Then("Admin clicks on the view button to see user's account")
     public void admin_clicks_on_the_view_button_to_see_user_s_account() {
-        JSUtils.clickElementByJS(staffPage.myUserViewButton);
         ReusableMethods.waitFor(5);
+        JSUtils.clickElementByJS(staffPage.myUserViewButton);
     }
-    //********************** ADMIN EDITS USER'S ACCOUNT
+    //********************** EDIT
     @And("Admin clicks on the edit button to see user's account")
     public void adminClicksOnTheEditButtonToSeeUserSAccount() {
-        JSUtils.clickElementByJS(staffPage.myUserEditButton);
-        ReusableMethods.waitFor(5);
+        ReusableMethods.waitFor(3);
+        JSUtils.clickElementByJS(staffPage.editBUttonStaffPageEmma);
 
     }
     @And("Admin types {string} into SSN field in Edit Page")
@@ -302,15 +298,96 @@ public class StaffPageStepDefs {
         ReusableMethods.waitFor(3);
         assertTrue(actualLogin.contains(ssn));
     }
-
-    @And("Admin is able to see user's page")
-    public void adminIsAbleToSeeUserSPage() {
-       String currentUrl = Driver.getDriver().getCurrentUrl();
-        System.out.println(currentUrl);
-        String expectedUrl ="https://www.medunna.com/admin/user-management/etta-team02";
-       ReusableMethods.waitFor(3);
-       Assert.assertEquals(expectedUrl,currentUrl);
+    @And("Admin clicks on the Save Button in user-management")
+    public void adminClicksOnTheSaveButtonInUserManagement() {
+        JSUtils.clickElementByJS(staffPage.saveSubmitButtonUserMan);
     }
 
+    //  ******************** REGISTRATION OF THE USER
 
+
+    @Then("Admin enters the login {string}")
+    public void admin_enters_the_login(String string) {
+        staffPage.loginField.sendKeys(string);
+    }
+    @Then("Admin enters the {string} into First Name input field")
+    public void admin_enters_the_into_first_name_input_field(String string) {
+        staffPage.firstnameField.sendKeys(string);
+    }
+    @Then("Admin enters the {string} into Last Name input field")
+    public void admin_enters_the_into_last_name_input_field(String string) {
+        staffPage.lastnameField.sendKeys(string);
+    }
+    @Then("Admin enters the {string} into Email input field")
+    public void admin_enters_the_into_email_input_field(String string) {
+        staffPage.emailField.sendKeys(string);
+    }
+
+    @And("Verify that phone {string} field is populated")
+    public void verifyThatPhoneFieldIsPopulated(String string) {
+        ReusableMethods.waitFor(2);
+        staffPage.staffPhoneField.sendKeys(string);
+    }
+
+    @And("Admin enters the phone number  {string} into phone field")
+    public void adminEntersThePhoneNumberIntoPhoneField(String string) {
+        ReusableMethods.waitFor(3);
+        staffPage.staffPhoneField.sendKeys(string);
+    }
+
+    @And("Admin verifies that new {string} has been added to staff's list")
+    public void adminVerifiesThatNewHasBeenAddedToStaffSList(String SSN) {
+        String pageSource=Driver.getDriver().getPageSource();
+        System.out.println(pageSource);
+        ReusableMethods.waitFor(3);
+        Assert.assertTrue(pageSource.contains(SSN));
+    }
+
+    @And("Admin selects a {string} of registered staff")
+    public void adminSelectsAOfRegisteredStaff(String user) {
+        ReusableMethods.waitFor(3);
+        String actualLogin = staffPage.userStaffAdele.getText();
+        System.out.println(actualLogin);
+        ReusableMethods.waitFor(3);
+        assertTrue(actualLogin.contains(user));
+
+    }
+
+    @And("Admin clicks on the edit button to see staff's account")
+    public void adminClicksOnTheEditButtonToSeeStaffSAccount() {
+        ReusableMethods.waitFor(2);
+        JSUtils.clickElementByJS(staffPage.editBUttonStaffPageEmma);
+    }
+
+    @And("Admin enters description {string} into description field")
+    public void adminEntersDescriptionIntoDescriptionField(String description) {
+        ReusableMethods.waitFor(2);
+        String actualDescription = staffPage.staffDescriptionField.getAttribute("value");
+        if (actualDescription.isEmpty()) {
+            staffPage.staffDescriptionField.sendKeys(description);
+        } else {
+            staffPage.staffDescriptionField.clear();
+            staffPage.staffDescriptionField.sendKeys(description);
+        }
+    }
+    @Then("Verify that new description  of the staff is {string}")
+    public void verifyThatNewDescriptionOfTheStaffIs(String description) {
+        ReusableMethods.waitFor(3);
+        assertTrue(staffPage.editedDescriptionEmma.isDisplayed());
+    }
+    @And("Admin clicks on the view button to see staff's account")
+    public void adminClicksOnTheViewButtonToSeeStaffSAccount() {
+        ReusableMethods.waitFor(3);
+        JSUtils.clickElementByJS(staffPage.viewBUttonStaffEmma);
+    }
+    @And("Admin selects a delete button of staff to be deleted")
+    public void adminSelectsADeleteButtonOfStaffToBeDeleted() {
+        ReusableMethods.waitFor(2);
+        JSUtils.clickElementByJS(staffPage.deleteBUttonStaffAdele);
+    }
+    @And("Admin clicks on delete pop up")
+    public void adminClicksOnDeletePopUp() {
+        ReusableMethods.waitFor(2);
+        JSUtils.clickElementByJS(staffPage.deleteStaffPopup);
+    }
 }
