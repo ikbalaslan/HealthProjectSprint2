@@ -3,11 +3,11 @@ package hooks;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-import org.bouncycastle.pqc.crypto.newhope.NHOtherInfoGenerator;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import utilities.Driver;
 
+import static base_url.AppBaseUrl.medunnaSetUp;
 import static base_url.MedunnaBaseUrl.medunnaSetUp2;
 
 
@@ -37,7 +37,6 @@ public class Hooks {
             Driver.closeDriver();
         }
     }
-
     // This Before hooks only runs for @smoke_tests tagged scenarios
 
     @Before("@smoke_test")
@@ -50,12 +49,15 @@ public class Hooks {
     public void tearDownSmokeScenario(){
         System.out.println("Run After Only Smoke Test Scenario");
     }
-
-    @Before("@API_Tests")
-    public void beforeApi2(){  // This method will run before Api TestS
-        medunnaSetUp2();
+    @Before("")
+    public void beforeApi(){  // This method will run before Api Tests
+        medunnaSetUp();
 
     }
 
-}
+    @Before("@Api_staff_get")
+    public void beforeApi2() {
+        medunnaSetUp2();     // This method actually works If you use the new one you will get 500 error.
+    }
 
+}
