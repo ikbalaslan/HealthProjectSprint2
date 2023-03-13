@@ -92,7 +92,8 @@ public class PhysicianPage {
     public WebElement deleteConfirmMessage;
 
 //-------------------------------------------------------------
-
+    @FindBy(xpath = "//div[@class='info jhi-item-count']/span")
+    public WebElement physicianCount;
 
 
 

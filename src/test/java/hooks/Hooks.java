@@ -21,7 +21,11 @@ Hooks is used to run before and after each SCENARIO or SCENARIO OUTLINE
         System.out.println("Before Method");
     }
     @After
+<<<<<<< HEAD
     public void tearDownScenario(Scenario scenario) {
+=======
+    public void tearDownScenario(Scenario scenario) throws InterruptedException {
+>>>>>>> main
 //        System.out.println("After Method");
         if (scenario.isFailed()) {
             final byte[] failedScreenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
@@ -43,8 +47,14 @@ Hooks is used to run before and after each SCENARIO or SCENARIO OUTLINE
         medunnaSetUp();
 
     }
+<<<<<<< HEAD
     @Before("@Api_Test")
     public void beforeApi3() {
+=======
+
+    @Before("@API_test")
+    public void beforeApi2(){
+>>>>>>> main
         medunnaSetUp2();     // This method actually works If you use the new one you will get 500 error.
     }
 //    @After("@smoke_tests")

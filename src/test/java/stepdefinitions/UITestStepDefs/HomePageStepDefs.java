@@ -57,7 +57,7 @@ public class HomePageStepDefs {
 
 
     @Then("Admin close the app")
-    public void admin_close_the_app() {
+    public void admin_close_the_app() throws InterruptedException {
         Driver.closeDriver();
     }
 
