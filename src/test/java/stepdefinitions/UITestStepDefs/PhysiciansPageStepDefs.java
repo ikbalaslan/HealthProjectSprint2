@@ -18,11 +18,13 @@ public class PhysiciansPageStepDefs {
 
     @And("{string} clicks Physician")
     public void clicksPhysician(String arg0) {
+
         homePage.physicianOption.click();
     }
 
     @And("{string} clicks create a new Physician button")
     public void clicksCreateANewPhysicianButton(String arg0) {
+
         physicianPage.createPhysician.click();
     }
 

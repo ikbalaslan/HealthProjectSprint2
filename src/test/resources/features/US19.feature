@@ -72,10 +72,16 @@ Feature: US19
 #    And Admin change firstname with "Doctor"
 #    Then Admin verify firstname is "Doctor"
 #    And Admin close the app
+#
+#  Scenario: TC09 Admin can delete existing Physicians
+#    When "Admin" clicks ID for sort list
+#    When Admin clicks delete button
+#    And Admin confirm deletion
+#    Then Admin verify deletion
+#    And Admin close the app
 
-  Scenario: TC09 Admin can delete existing Physicians
-    When "Admin" clicks ID for sort list
-    When Admin clicks delete button
-    And Admin confirm deletion
-    Then Admin verify deletion
-    And Admin close the app
+  Scenario: TC10 Admin verify all physicians using API
+    When Admin get count of physicians
+    And Admin send get request to API
+    And Admin get physicians count from API
+    Then Admin verify physicians count from UI equals with count from API

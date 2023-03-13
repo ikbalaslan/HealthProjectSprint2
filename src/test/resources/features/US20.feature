@@ -2,12 +2,14 @@
 Feature: Health_Project_US20
 
   Background:User_goes_to_url
+#    Given User goes to the home page
     When "Admin" goes home page
     When "Admin" clicks account menu dropdown
     Then "Admin" clicks sign in button
     And "Admin" enters "admin_username" in username field
     And "Admin" enters "admin_password" in password field
     And "Admin" clicks sign in submit button
+
 
   @registration
   Scenario Outline:TC_01_Registration
@@ -24,10 +26,13 @@ Feature: Health_Project_US20
     Then Verify that success message appears
     And User closes the application
     Examples:
-#    | SSN         | First Name    | Last Name | Username      | Email               | password | second password |
-#    | 443-11-4336 | Adele01-staff | Watson    | adele01team02 | adeline02@gmail.com | Adele1!  | Adele1!         |
-#    | 443-22-4336 | Adele02-staff | Watson    | adele02team02 | adeline02@gmail.com | Adele1!  | Adele1!         |
-#    | 443-33-4446 | Adele03-staff | Watson    | adele03team02 | adeline03@gmail.com | Adele1!  | Adele1!         |
+      | SSN         | First Name | Last Name | Username    | Email           | password | second password |
+      | 645-56-3765 | Nahla      | Oruc      | nahla-staff | nahla@gmail.com | Nahla2!  | Nahla2!         |
+
+
+##    | 443-11-4336 | Adele01-staff | Watson    | adele01team02 | adeline02@gmail.com | Adele1!  | Adele1!         |
+##    | 443-22-4336 | Adele02-staff | Watson    | adele02team02 | adeline02@gmail.com | Adele1!  | Adele1!         |
+##    | 443-33-4446 | Adele03-staff | Watson    | adele03team02 | adeline03@gmail.com | Adele1!  | Adele1!
 
   @admin
   Scenario:TC02_activate_registered_user
@@ -44,10 +49,8 @@ Feature: Health_Project_US20
     Then Admin close the app
 
 
-
+  @admin_searches_staff_by_SSN
   Scenario Outline:TC03_admin_searches_staff_by_SSN
-    Then Admin clicks administration dropdown
-    And Admin click user management button
     And Admin clicks on Items&Titles dropdown
     And Admin clicks on Staff from the dropdown
     And Admin clicks on Create A New Staff Button
@@ -59,6 +62,7 @@ Feature: Health_Project_US20
     Examples:
       | SSN         |
       | 443-11-4336 |
+#      | 645-56-3765 |    443-88-4336
 
 
   @staff_search_and_info_populated
@@ -103,28 +107,31 @@ Feature: Health_Project_US20
 
 
   @admin_edits_staff_account_06
-  Scenario Outline:TC05_admin_edits_registered_user
-    Then Admin clicks administration dropdown
-    And Admin click user management button
-    And Admin sorts page by created date
-    And Admin selects a "<login>" of registered user
-    And Admin clicks on the edit button to see user's account
-    And Admin types "<SSN>" into SSN field in Edit Page
-    And Admin clicks on the Save Button
-    And Admin sorts page by created date
-    And Admin selects a "<login>" of registered user
-    Then Verify that new SSN number of the user is "<SSN>"
-    Then Admin close the app
+  Scenario Outline:TC06_admin_edits_registered_user
+    And Admin clicks on Items&Titles dropdown
+    And Admin clicks on Staff from the dropdown
+    And Admin sort page by ID descending order
+    And Admin selects a "<User>" of registered staff
+    And Admin clicks on the edit button to see staff's account
+    And Admin clicks on User Search checkbox
+    And Admin types "<SSN>" into SSN field in New Staff Page
+    And Admin clicks on Search User button
+    And Admin enters description "<description>" into description field
+    And Admin clicks on the Save Button in user-management
+    And Admin clicks on the view button to see staff's account
+
+    Then Verify that new description  of the staff is "<description>"
+#    Then Admin close the app
     Examples:
-      | login       | SSN         |
-      | etta-team02 | 765-70-0907 |
+      | User       | SSN         | description                 |
+      | emmateam02 | 443-88-4336 | Zdravo bili gdje god bili ! |
 
 
 #  //tbody//td[13]
 
 
-  @admin_create_new_staff05
-  Scenario Outline:TC06_admin_edits_registered_user
+  @admin_create_new_staff07
+  Scenario Outline:TC07_admin_create_registered_user
     Then Admin clicks administration dropdown
     And Admin click user management button
     And Admin clicks on Create a new user link
@@ -136,25 +143,37 @@ Feature: Health_Project_US20
     And Admin selects the language from the drop down
     And Admin select "ROLE_STAFF" from profiles
     And Admin clicks on the Save Button
-    Then Verify that success message New User is Created pops up
+    And Admin clicks on Items&Titles dropdown
+    And Admin clicks on Staff from the dropdown
+    And Admin clicks on Create A New Staff Button
+    And Admin clicks on User Search checkbox
+    And Admin types "<SSN>" into SSN field in New Staff Page
+    And Admin clicks on Search User button
+    And Admin enters the phone number  "<phone number>" into phone field
+    And Admin clicks on the Save Button
+    And Admin clicks on Items&Titles dropdown
+    And Admin clicks on Staff from the dropdown
+    And Admin verifies that new "<SSN>" has been added to staff's list
     Then Admin close the app
     Examples:
-      | login | firstname | lastname | email | SSN |
-      | etna-team02 | Etna  | Watson | etna@gmail.com | 345-70-9378 |
+      | login         | firstname | lastname | email             | SSN         | phone number |
+      | erna.watson1  | Etna      | Watson   | erna@gmail.com    | 345-23-9378 | 1234567898   |
+      | sara.watson1  | Sarahan   | Watson   | sara12@gmail.com  | 345-98-9378 | 1378678907   |
+      | pudar.watson1 | Lana      | Watson   | pudar23@gmail.com | 345-56-9378 | 1345645356   |
 
 
-  @admin_delete_staff10
-  Scenario Outline:TC07_admin_edits_registered_user
-    Then Admin clicks administration dropdown
-    And Admin click user management button
-    And Admin sorts page by created date
-    And Admin selects a "<login>" to be deleted
-    And Admin clicks on the delete button
+  @admin_delete_staff08
+  Scenario Outline:TC08_admin_edits_registered_user
+    And Admin clicks on Items&Titles dropdown
+    And Admin clicks on Staff from the dropdown
+    And Admin sort page by ID descending order
+    And Admin selects a "<User>" of registered staff
+    And Admin selects a delete button of staff to be deleted
     And Admin clicks on delete button
     And Verify that confirm delete opp pop up appears
-    And Admin clicks on delete pop up button
+    And Admin clicks on delete pop up
     Then Verify that message delete is successful appears
     Then Admin close the app
     Examples:
-      | login |
-      | xsxss |
+      | User |
+      | adele01team02 |

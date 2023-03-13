@@ -9,6 +9,7 @@ import java.util.HashMap;
 public  class PatientGenerateToken {
 
     public static void main(String[] args) {
+
         generateToken();
     }
 
