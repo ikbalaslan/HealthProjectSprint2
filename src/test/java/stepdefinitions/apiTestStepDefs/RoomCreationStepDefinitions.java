@@ -8,6 +8,7 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import pojos.RoomCreationPojo;
 
+//import static base_url.MedunnaBaseUrl.spec;
 import static base_url.MedunnaBaseUrl.spec;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
