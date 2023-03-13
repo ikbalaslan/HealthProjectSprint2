@@ -7,6 +7,8 @@ import utilities.ConfigReader;
 import static utilities.AuthenticationMedunna.generateToken;
 
 public class MedunnaBaseUrl {
+
+
     public static RequestSpecification spec;
 
 

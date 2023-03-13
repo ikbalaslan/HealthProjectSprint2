@@ -28,10 +28,12 @@ public class RoomPageStepDefs {
     static String roomPrice = Faker.instance().number().digits(3);
 
     public String getRoomPrice() {
+
         return roomPrice;
     }
 
     public int getRoomNumber() {
+
         return roomNumber;
     }
 
