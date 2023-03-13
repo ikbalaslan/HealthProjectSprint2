@@ -2,12 +2,13 @@ package stepdefinitions.databaseTestStepDefs;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import utilities.DBUtils;
 
 public class PhysiciansDbStepDefs {
 
     @Given("Admin connects to database")
     public void admin_connects_to_database() {
-
+        DBUtils.getConnection();
     }
 
     @Given("user gets the column {string} from table {string}")
