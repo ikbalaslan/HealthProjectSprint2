@@ -79,9 +79,17 @@ Feature: US19
 #    And Admin confirm deletion
 #    Then Admin verify deletion
 #    And Admin close the app
-
+#
   Scenario: TC10 Admin verify all physicians using API
     When Admin get count of physicians
     And Admin send get request to API
     And Admin get physicians count from API
     Then Admin verify physicians count from UI equals with count from API
+    And Admin close the app
+
+  Scenario: TC11 TC10 Admin verify all physicians using database
+    When Admin get count of physicians
+    And Admin connect to the database
+    And Admin send query
+    And Admin verify physicians count from UI equals with count from database
+    And Admin close the app
