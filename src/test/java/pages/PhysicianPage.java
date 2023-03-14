@@ -7,6 +7,7 @@ import utilities.Driver;
 
 public class PhysicianPage {
     public PhysicianPage() {
+
         PageFactory.initElements(Driver.getDriver(),this);
     }
 

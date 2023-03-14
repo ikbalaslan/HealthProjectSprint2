@@ -18,8 +18,7 @@ public class StaffDBStepDefs {
       DBUtils.createConnection();
     }
     @When("get all {string} as a list from {string}")
-    public void get_all_as_a_list(
-            String columnName,String tableName) {
+    public void get_all_as_a_list(String columnName,String tableName) {
 
         String query = "SELECT * FROM " + tableName;
         columnList = DBUtils.getColumnData(query,columnName);
@@ -59,6 +58,7 @@ public class StaffDBStepDefs {
         System.out.println(columnData);
         Assert.assertTrue(columnData.contains(data));
     }
+
 
 
 }

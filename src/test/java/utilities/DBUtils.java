@@ -27,9 +27,10 @@ public class DBUtils {
         try {
             connection = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
+
             e.printStackTrace();
         }
+        System.out.println("Connection Success");
     }
     /**
      * DBUtils.executeQuery(String query); -> Execute the query and store is the result set object
@@ -39,8 +40,7 @@ public class DBUtils {
         try {
             statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            // TODO Auto-generated catch block
+
             e.printStackTrace();
         }
         try {

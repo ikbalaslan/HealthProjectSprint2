@@ -1,30 +1,23 @@
 package stepdefinitions.apiTestStepDefs;
 
-import base_url.AppBaseUrl;
-import base_url.MedunnaBaseUrl;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.codehaus.jackson.map.ObjectMapper;
-import org.junit.Assert;
 import pojos.Physicians;
-import utilities.AuthenticationMedunna;
 import utilities.MedunnaAuthentication;
-import utilities.PatientGenerateToken;
 
 
 import java.io.IOException;
 import java.util.List;
 
 
-import static base_url.MedunnaBaseUrl.spec;
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.collection.IsCollectionWithSize.hasSize;
 
-public class PhysiciansApiStepDefs {
+public class PhysiciansApiStepDefs_US31 {
 
     Physicians physicians = new Physicians();
     Response response;
