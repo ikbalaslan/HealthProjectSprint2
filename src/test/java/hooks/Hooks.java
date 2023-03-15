@@ -7,61 +7,66 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import utilities.Driver;
 
-
-
 import static base_url.AppBaseUrl.medunnaSetUp;
 import static base_url.MedunnaBaseUrl.medunnaSetUp2;
 
 
 public class Hooks {
     /*
-Hooks is used to run before and after each SCENARIO or SCENARIO OUTLINE
- */
+    HOOKS
+> specific for Cucumber .. important one
+> it is a class that runs Before and After each Scenario and Scenario Outline
+> used to generate reports with screenshots
+> AfterMethod is very helpful to capture screenshots when Scenario fails
+> screenshot will be attached in html file
+> import from Cucumber
+     */
 
+    @Before
+    public void setUpScenario() {   // runs before the given Scenario
+        System.out.println("Before Scenario Method");
 
-
-
-    @Before //use cucumber library
-    public void setUpScenario(){
-        System.out.println("Before Method");
     }
 
     @After
-    public void tearDownScenario(Scenario scenario){
-//        System.out.println("After Method");
-        if (scenario.isFailed()){
-            final byte[] failedScreenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
-            scenario.attach(failedScreenshot,"image/png","failed_scenario"+scenario.getName());
+    public void tearDownScenario(Scenario scenario) {
+        System.out.println("After Scenario Method");
+
+        if (scenario.isFailed()) {
+            final byte[] failedScreenshot = ((TakesScreenshot) (Driver.getDriver())).getScreenshotAs(OutputType.BYTES);
+            scenario.attach(failedScreenshot, "image/png", "failed_scenario" + scenario.getName());
             Driver.closeDriver();
         }
     }
+    // This Before hooks only runs for @smoke_tests tagged scenarios
 
-
-    //    This Before hooks ONLY RUNS for @smoke_test TAGGED SCENARIOS
-//    @Before(value = "@smoke_tests")
-    @Before("@smoke_tests")
-    public void setUpSmokeScenarios(){
-        System.out.println("RUN FOR ONLY SMOKE TEST SCENARIOS");
+    @Before("@smoke_test")
+    public void setUpSmokeScenario() {
+        System.out.println("Run BEFORE Only Smoke Test Scenario");
     }
-    //This After hooks ONLY RUNS for @smoke_test TAGGED SCENARIOS
 
-
-    @After("@smoke_tests")
-    public void tearDownSmokeScenarios(){
-
-        System.out.println("RUN FOR ONLY SMOKE TEST SCENARIOS");
+    // This After hooks only runs for @smoke_tests tagged scenarios
+    @After("@smoke_test")
+    public void tearDownSmokeScenario() {
+        System.out.println("Run After Only Smoke Test Scenario");
     }
-    @Before("@US08")
-    public void beforeApi(){  // This method will run before Api Tests
+
+
+    @Before("@API_Tests")
+    public void beforeApi2() {  // This method will run before Api TestS
+        medunnaSetUp2();
+    }
+    @Before("")
+    public void beforeApi () {  // This method will run before Api Tests
         medunnaSetUp();
 
-    }
-
-    @Before("@API_validation")
-    public void beforeApi2(){
-        medunnaSetUp2();     // This method actually works If you use the new one you will get 500 error.
 
     }
+//
+//        @Before("@Api_staff_get")
+//        public void beforeApi () {
+//            medunnaSetUp2();     // This method actually works If you use the new one you will get 500 error.
+//        }
 
 
 

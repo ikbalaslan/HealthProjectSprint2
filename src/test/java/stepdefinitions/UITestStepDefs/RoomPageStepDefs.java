@@ -28,10 +28,12 @@ public class RoomPageStepDefs {
     static String roomPrice = Faker.instance().number().digits(3);
 
     public String getRoomPrice() {
+
         return roomPrice;
     }
 
     public int getRoomNumber() {
+
         return roomNumber;
     }
 
@@ -58,6 +60,7 @@ public class RoomPageStepDefs {
     @When("\"Admin\"clicks save button")
     public void admin_clicks_save_button() {
         JSUtils.clickElementByJS(roomsPage.saveButton);
+
     }
 
     @When("{string} clicks ID for sort list")
