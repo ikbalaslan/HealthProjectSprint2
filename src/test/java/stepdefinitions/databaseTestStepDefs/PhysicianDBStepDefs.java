@@ -9,12 +9,13 @@ import utilities.JdbcUtils;
 import java.util.List;
 
 public class PhysicianDBStepDefs {
+
     PhysicianApiStepDefs physicianApiStepDefs = new PhysicianApiStepDefs();
     static List<Object> databaseList;
 
     @And("Admin connect to the database")
     public void adminConnectToTheDatabase() {
-        JdbcUtils.connectToDatabase("157.230.48.97","medunna_db_v2","select_user","Medunna_pass_@6");
+    JdbcUtils.connectToDatabase("157.230.48.97","medunna_db_v2","select_user","Medunna_pass_@6");
 
     }
 

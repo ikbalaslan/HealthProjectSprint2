@@ -1,7 +1,7 @@
 @Api_Test
 Feature: Doctors List Validation
 
-  @US31_Api
+  @US31
   Scenario: TC01_Doctors_List_should_Validate
     Given "Admin" sends GET request for physicians list
     Then HTTP status code must be 200
