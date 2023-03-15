@@ -3,37 +3,54 @@ package stepdefinitions.databaseTestStepDefs;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
-import utilities.DBUtils;
+import pages.PhysicianPage;
+import stepdefinitions.apiTestStepDefs.PhysicianApiStepDefs;
+
+import utilities.JdbcUtils;
 
 import java.util.List;
 
-import static org.junit.Assert.assertTrue;
+
 
 public class PhysiciansDBStepdefs_US31 {
 
+    PhysicianApiStepDefs physicianApiStepDefs = new PhysicianApiStepDefs();
+    PhysicianPage physicianPage = new PhysicianPage();
+    public static String expectedData = "";
     List<Object> columnList;
 
-    @Given("user connect to database")
-    public void userConnectToDatabase() {
-        DBUtils.createConnection();
+    @When("user gets counts of physicians")
+    public void userGetsCountsOfPhysicians() {
+
+        String countOfPhysicians = physicianPage.physicianCount.getText();
+        System.out.println(countOfPhysicians);
+        String[] listOfString = countOfPhysicians.split(" ");
+        expectedData = listOfString[5];
+        System.out.println("expectedData = " + expectedData);
+    }
+
+    @Given("user connects to database")
+    public void userConnectsToDatabase() {
+
+   JdbcUtils.connectToDatabase("157.230.48.97","medunna_db_v2","select_user","Medunna_pass_@6");
 
     }
 
-    @And("user send requests to gets the column {string} from table {string}")
-    public void userSendRequestsToGetsTheColumnFromTable(String column, String table ) {
+    @And("user sends the requests")
+    public void userSendsTheRequests() {
+        columnList = JdbcUtils.getColumnList("id","\"public\".physician");
+    }
 
-        String query = "SELECT"+column+"FROM"+table;
-        columnList = DBUtils.getColumnData(query,column);
-        System.out.println("columnList = " +columnList );
+    @Then("user verifies count of physicians with count of DataBase")
+    public void userVerifiesCountOfPhysiciansWithCountOfDataBase() {
+
+        String actualData = String.valueOf(columnList.size());
+        System.out.println("actualData = " + actualData);
+        System.out.println(PhysicianApiStepDefs.getExpectedData());
+        Assert.assertEquals(PhysicianApiStepDefs.expectedData, actualData);
     }
 
 
-
-    @Then("user verify table id list has {string}")
-    public void userVerifyTableIdListHas(String id) {
-
-        assertTrue(columnList.contains("id"));
-
-    }
 }

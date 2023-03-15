@@ -1,13 +1,13 @@
 
-@Physicians_DB
+@US31_db
   Feature: Physicians Validation
       @Physician_valid
-      Scenario: Validate_physicians_data
-      Given user connects to database
-      And user send requests to gets the column "id" from table "physician"
-      Then user verify table id list has "1303"
+      Scenario: Validate_physicians_dat
+      When user gets counts of physicians
+      And user connect to database
+      And user sends the requests
+      Then user verifies count of physicians with count of DataBase
       And close the connection
-
 
 
 
