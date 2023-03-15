@@ -56,12 +56,12 @@ public class Hooks {
     public void beforeApi2() {  // This method will run before Api TestS
         medunnaSetUp2();
     }
-        @Before("")
-        public void beforeApi () {  // This method will run before Api Tests
-            medunnaSetUp();
+    @Before("")
+    public void beforeApi () {  // This method will run before Api Tests
+        medunnaSetUp();
 
 
-        }
+    }
 //
 //        @Before("@Api_staff_get")
 //        public void beforeApi () {
@@ -70,5 +70,4 @@ public class Hooks {
 
 
 
-    }
-
+}

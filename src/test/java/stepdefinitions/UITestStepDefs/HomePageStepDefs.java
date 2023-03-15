@@ -12,11 +12,6 @@ import utilities.ReusableMethods;
 public class HomePageStepDefs {
     HomePage homePage = new HomePage();
 
-    @When("{string} goes home pagee")
-    public void goes_home_pagee(String string) {
-
-        Driver.getDriver().get(ConfigReader.getProperty("app_url"));
-    }
     @When("{string} clicks account menu dropdown")
     public void clicks_account_menu_dropdown(String string) {
 
@@ -34,6 +29,8 @@ public class HomePageStepDefs {
     public void goes_home_page(String string) {
         Driver.getDriver().get(ConfigReader.getProperty("app_url"));
     }
+
+
     @When("{string} clicks account menu")
     public void clicks_account_menu(String string) {
         homePage.userIcon.click();
@@ -60,5 +57,6 @@ public class HomePageStepDefs {
     public void admin_close_the_app() throws InterruptedException {
         Driver.closeDriver();
     }
+
 
 }
