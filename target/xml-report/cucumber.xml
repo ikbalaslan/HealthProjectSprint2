@@ -1,168 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="132.38" tests="8" skipped="0" failures="0" errors="0">
-<testcase classname="Room creation / View / Update / Delete" name="TC01 User (Admin) can create new rooms for impatients" time="19.557">
+<testsuite name="Cucumber" time="13.844" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="Test Results and payment view" name="TC01 Patient see their test results" time="7.685">
 <system-out><![CDATA[
-Given "Admin" goes home page................................................passed
-When "Admin" clicks account menu............................................passed
-And "Admin" clicks sign in..................................................passed
-And "Admin" enters "admin_username" in username field.......................passed
-And "Admin" enters "admin_password" in password field.......................passed
-And "Admin" clicks sign in submit button....................................passed
-And "Admin" clicks items&titiles menu.......................................passed
-And "Admin" clicks room.....................................................passed
-When "Admin"clicks create a new room button.................................passed
-And "Admin"enters room number...............................................passed
-And "Admin"enters room price................................................passed
-And "Admin"clicks save button...............................................passed
-And "Admin" clicks ID for sort list.........................................passed
-And "Admin" get room id.....................................................passed
-Then "Admin" verify "room_number" from Rooms Page...........................passed
-Then "Admin"verify "room_id" from API.......................................passed
-Then "Admin"verify "room_id" from DB........................................passed
-And Admin close the app.....................................................passed
+Given "Patient" goes home page..............................................passed
+When "Patient" clicks account menu..........................................passed
+And "Patient" clicks sign in................................................passed
+And "Patient" enters "patient_username1" in username field..................passed
+And "Patient" enters "patient_password1" in password field..................passed
+And "Patient" click on RememberMe checkbox..................................passed
+And "Patient" clicks sign in submit button..................................passed
+And "Patient" click on My Pages(Patient)....................................passed
+And "Patient" click on My Appointments option...............................passed
+When "Patient" click on Show Test button....................................passed
+When "Patient" click on View Result button..................................passed
+And Patient close the app...................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Room creation / View / Update / Delete" name="TC02  there should be room number and room type" time="17.41">
+<testcase classname="Test Results and payment view" name="TC02 Patient see their test results" time="5.896">
 <system-out><![CDATA[
-Given "Admin" goes home page................................................passed
-When "Admin" clicks account menu............................................passed
-And "Admin" clicks sign in..................................................passed
-And "Admin" enters "admin_username" in username field.......................passed
-And "Admin" enters "admin_password" in password field.......................passed
-And "Admin" clicks sign in submit button....................................passed
-And "Admin" clicks items&titiles menu.......................................passed
-And "Admin" clicks room.....................................................passed
-When "Admin"clicks create a new room button.................................passed
-Then "Admin" verify "room_number" field is required.........................passed
-And "Admin"enters room number...............................................passed
-And "Admin"select room type "DELUXE"........................................passed
-And "Admin"enters room price................................................passed
-And "Admin"clicks save button...............................................passed
-And "Admin" clicks ID for sort list.........................................passed
-And "Admin" get room id.....................................................passed
-Then "Admin" verify "room_number" from Rooms Page...........................passed
-Then Admin verify room_type is "DELUXE" from Rooms Page.....................passed
-Then "Admin" verify roomNumber from API.....................................passed
-Then "Admin" verify room_number from DB.....................................passed
-Then Admin verify room_type is "DELUXE" from API............................passed
-Then Admin verify "room_type" is "DELUXE" from DB...........................passed
-And Admin close the app.....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Room creation / View / Update / Delete" name="TC03 Current status can be set for the room" time="12.643">
-<system-out><![CDATA[
-Given "Admin" goes home page................................................passed
-When "Admin" clicks account menu............................................passed
-And "Admin" clicks sign in..................................................passed
-And "Admin" enters "admin_username" in username field.......................passed
-And "Admin" enters "admin_password" in password field.......................passed
-And "Admin" clicks sign in submit button....................................passed
-And "Admin" clicks items&titiles menu.......................................passed
-And "Admin" clicks room.....................................................passed
-When "Admin"clicks create a new room button.................................passed
-And "Admin"enters room number...............................................passed
-And "Admin"enters room price................................................passed
-And "Admin" clicks status...................................................passed
-And "Admin"clicks save button...............................................passed
-And "Admin" clicks ID for sort list.........................................passed
-And "Admin" get room id.....................................................passed
-Then "Admin" verify status from Rooms Page..................................passed
-Then "Admin" verify status is "true" from API...............................passed
-Then Admin verify "status" is "t" from DB...................................passed
-And Admin close the app.....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Room creation / View / Update / Delete" name="TC04 Price can be added and cannot be blank" time="16.584">
-<system-out><![CDATA[
-Given "Admin" goes home page................................................passed
-When "Admin" clicks account menu............................................passed
-And "Admin" clicks sign in..................................................passed
-And "Admin" enters "admin_username" in username field.......................passed
-And "Admin" enters "admin_password" in password field.......................passed
-And "Admin" clicks sign in submit button....................................passed
-And "Admin" clicks items&titiles menu.......................................passed
-And "Admin" clicks room.....................................................passed
-When "Admin"clicks create a new room button.................................passed
-And "Admin"enters room number...............................................passed
-And Admin verify "price" field is required..................................passed
-And "Admin"enters room price................................................passed
-And "Admin"clicks save button...............................................passed
-And "Admin" clicks ID for sort list.........................................passed
-And "Admin" get room id.....................................................passed
-Then Admin verify "price" from API..........................................passed
-Then Admin verify "price" from DB...........................................passed
-And Admin close the app.....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Room creation / View / Update / Delete" name="TC05 Description can be provided optionally" time="9.07">
-<system-out><![CDATA[
-Given "Admin" goes home page................................................passed
-When "Admin" clicks account menu............................................passed
-And "Admin" clicks sign in..................................................passed
-And "Admin" enters "admin_username" in username field.......................passed
-And "Admin" enters "admin_password" in password field.......................passed
-And "Admin" clicks sign in submit button....................................passed
-And "Admin" clicks items&titiles menu.......................................passed
-And "Admin" clicks room.....................................................passed
-When "Admin"clicks create a new room button.................................passed
-And "Admin"enters room number...............................................passed
-And "Admin"enters room price................................................passed
-And "Admin"clicks save button...............................................passed
-And "Admin" clicks ID for sort list.........................................passed
-And "Admin" get room id.....................................................passed
-Then "Admin" verify "room_number" from Rooms Page...........................passed
-And Admin close the app.....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Room creation / View / Update / Delete" name="TC06 Created date as MM/DAY/YEAR and cannot be typed earlier" time="22.711">
-<system-out><![CDATA[
-Given "Admin" goes home page................................................passed
-When "Admin" clicks account menu............................................passed
-And "Admin" clicks sign in..................................................passed
-And "Admin" enters "admin_username" in username field.......................passed
-And "Admin" enters "admin_password" in password field.......................passed
-And "Admin" clicks sign in submit button....................................passed
-And "Admin" clicks items&titiles menu.......................................passed
-And "Admin" clicks room.....................................................passed
-When "Admin"clicks create a new room button.................................passed
-And Admin enters "12.12.2000 00:00" in Created Date field...................passed
-Then Admin verify earlier date can typed....................................passed
-And Admin close the app.....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Room creation / View / Update / Delete" name="TC07 Admin can view all rooms with same items" time="21.944">
-<system-out><![CDATA[
-Given "Admin" goes home page................................................passed
-When "Admin" clicks account menu............................................passed
-And "Admin" clicks sign in..................................................passed
-And "Admin" enters "admin_username" in username field.......................passed
-And "Admin" enters "admin_password" in password field.......................passed
-And "Admin" clicks sign in submit button....................................passed
-And "Admin" clicks items&titiles menu.......................................passed
-And "Admin" clicks room.....................................................passed
-And "Admin" verify all rooms on the page has "Room Number" header...........passed
-And Admin close the app.....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Room creation / View / Update / Delete" name="TC08 Admin can edit(update) existing rooms" time="12.18">
-<system-out><![CDATA[
-Given "Admin" goes home page................................................passed
-When "Admin" clicks account menu............................................passed
-And "Admin" clicks sign in..................................................passed
-And "Admin" enters "admin_username" in username field.......................passed
-And "Admin" enters "admin_password" in password field.......................passed
-And "Admin" clicks sign in submit button....................................passed
-And "Admin" clicks items&titiles menu.......................................passed
-And "Admin" clicks room.....................................................passed
-And "Admin" clicks ID for sort list.........................................passed
-And "Admin" get room id.....................................................passed
-And "Admin" click edit button of lastest room...............................passed
-And "Admin" change "room_number"............................................passed
-And "Admin"clicks save button...............................................passed
-Then "Admin" verify "room_number" from Rooms Page...........................passed
-Then "Admin" verify roomNumber from API.....................................passed
-Then "Admin" verify room_number from DB.....................................passed
-And Admin close the app.....................................................passed
+Given "Patient" goes home page..............................................passed
+When "Patient" clicks account menu..........................................passed
+And "Patient" clicks sign in................................................passed
+And "Patient" enters "patient_username1" in username field..................passed
+And "Patient" enters "patient_password1" in password field..................passed
+And "Patient" click on RememberMe checkbox..................................passed
+And "Patient" clicks sign in submit button..................................passed
+And "Patient" click on My Pages(Patient)....................................passed
+And "Patient" click on My Appointments option...............................passed
+When "Patient" click on Show Invoice button.................................passed
+And Patient close the app...................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

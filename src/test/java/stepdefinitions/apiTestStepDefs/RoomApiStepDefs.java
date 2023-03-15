@@ -102,4 +102,6 @@ public class RoomApiStepDefs {
         Assert.assertEquals(roomPageStepDefs.getRoomPrice(),
                 String.valueOf(actualData.getString(arg0)).substring(0,3));
     }
+
+
 }

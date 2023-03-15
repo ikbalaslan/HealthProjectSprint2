@@ -1,5 +1,6 @@
 package stepdefinitions.UITestStepDefs;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -11,11 +12,6 @@ import utilities.ReusableMethods;
 public class HomePageStepDefs {
     HomePage homePage = new HomePage();
 
-    @When("{string} goes home pagee")
-    public void goes_home_pagee(String string) {
-
-        Driver.getDriver().get(ConfigReader.getProperty("app_url"));
-    }
     @When("{string} clicks account menu dropdown")
     public void clicks_account_menu_dropdown(String string) {
 
@@ -33,6 +29,8 @@ public class HomePageStepDefs {
     public void goes_home_page(String string) {
         Driver.getDriver().get(ConfigReader.getProperty("app_url"));
     }
+
+
     @When("{string} clicks account menu")
     public void clicks_account_menu(String string) {
         homePage.userIcon.click();
@@ -61,4 +59,8 @@ public class HomePageStepDefs {
     }
 
 
+    @And("Patient close the app")
+    public void patientCloseTheApp() {
+        Driver.closeDriver();
+    }
 }

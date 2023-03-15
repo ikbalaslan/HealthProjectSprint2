@@ -5,7 +5,8 @@ Feature: Room creation / View / Update / Delete
     Given "Admin" goes home page
     When "Admin" clicks account menu
     And "Admin" clicks sign in
-    And "Admin" enters "admin_username" in username field
+    And "Admin" enters "admin
+    And "Admin" enters "admin__username" in username field
     And "Admin" enters "admin_password" in password field
     And "Admin" clicks sign in submit button
     And "Admin" clicks items&titiles menu

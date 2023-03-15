@@ -182,4 +182,37 @@ public class RoomPageStepDefs {
         roomsPage.roomNumber.clear();
         roomsPage.roomNumber.sendKeys(String.valueOf(roomNumber));
     }
+
+    @And("{string} verify Test Result Page which page contains id, name for test, default max and min value, test date and description")
+    public void verifyTestResultPageWhichPageContainsIdNameForTestDefaultMaxAndMinValueTestDateAndDescription(String arg0) {
+
+        Assert.assertTrue(roomDetailsPage.TestResultsTest.isDisplayed());
+        Assert.assertTrue(roomDetailsPage.TestResultsDate.isDisplayed());
+        Assert.assertTrue(roomDetailsPage.TestResultsTitle.isDisplayed());
+        Assert.assertTrue(roomDetailsPage.TestResultsID.isDisplayed());
+        Assert.assertTrue(roomDetailsPage.TestResultsResult.isDisplayed());
+        Assert.assertTrue(roomDetailsPage.TestResultsDefaultMinValue.isDisplayed());
+        Assert.assertTrue(roomDetailsPage.TestResultsDefaultMaxValue.isDisplayed());
+       Assert.assertTrue(roomDetailsPage.TestResultsDescription.isDisplayed());
+
+
+
+    }
+
+    @Then("Patient verify Invoice Page which page contains Date,SSN,Name of Patient, Payment Method and Total Cost")
+    public void patientVerifyInvoicePageWhichPageContainsDateSSNNameOfPatientPaymentMethodAndTotalCost() {
+
+        Assert.assertTrue(roomDetailsPage.InvoiceDate.isDisplayed());
+        Assert.assertTrue(roomDetailsPage.InvoiceSSN.isDisplayed());
+        Assert.assertTrue(roomDetailsPage.InvoiceNameOfPatient.isDisplayed());
+        Assert.assertTrue(roomDetailsPage.InvoicePaymentMethod.isDisplayed());
+        Assert.assertTrue(roomDetailsPage.InvoiceTotalCost.isDisplayed());
+        Assert.assertTrue(roomDetailsPage.InvoiceINVOICE.isDisplayed());
+
+
+
+
+
+
+    }
 }
