@@ -31,12 +31,12 @@ public class PhysiciansDBStepdefs_US31 {
         System.out.println("expectedData = " + expectedData);
     }
 
-    @Given("user connects to database")
-    public void userConnectsToDatabase() {
-
-   JdbcUtils.connectToDatabase("157.230.48.97","medunna_db_v2","select_user","Medunna_pass_@6");
-
-    }
+//    @Given("user connects to database")
+//    public void userConnectsToDatabase() {
+//
+//   JdbcUtils.connectToDatabase("157.230.48.97","medunna_db_v2","select_user","Medunna_pass_@6");
+//
+//    }
 
     @And("user sends the requests")
     public void userSendsTheRequests() {

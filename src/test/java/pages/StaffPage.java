@@ -170,4 +170,77 @@ public class StaffPage {
 
     @FindBy(id ="jhi-confirm-delete-staff")
     public WebElement deleteStaffPopup;
+
+
+
+    // *********** US_23 WebElements ****************
+
+    @FindBy(id = "entity-menu")
+    public WebElement myPages;
+
+    @FindBy(xpath = "//span[.='Search Patient']")
+    public WebElement searchPatient;
+
+    @FindBy(xpath = "//input[@name='ssn']")
+    public WebElement searchPatientBySsn;
+
+    @FindBy(xpath = "//tbody//tr//td[2]")
+    public List<WebElement> staffSearchedSsnList;
+
+    @FindBy(xpath = "//span[.='Show Appointments']")
+    public WebElement showAppointmentsLink;
+
+    @FindBy(xpath = "//span[.='Show Appointments']")
+    public List<WebElement> showAppointmentsList;
+
+    @FindBy(id = "appointment-heading")
+    public WebElement appointmentHeading;
+
+    @FindBy(xpath = "//span[.='Show Tests']")
+    public WebElement showTestsLink;
+
+    @FindBy(xpath = "//span[.='Tests']")
+    public WebElement testHeading;
+
+    @FindBy(xpath = "//span[.='View Results']")
+    public WebElement viewResultsLink;
+
+    @FindBy(xpath = "//span[.='Test Results']")
+    public WebElement testResultsHeading;
+
+    @FindBy(xpath = "//span[.='Edit']")
+    public WebElement editResultsLink;
+    @FindBy(xpath = "//span[.='Create or edit a Test Result']")
+    public WebElement editResultsHeading;
+
+    @FindBy(id = "c-test-result-result")
+    public WebElement resultInput;
+
+    @FindBy(xpath = "//button[@id='save-entity']")
+    public WebElement saveButton;
+
+    @FindBy(xpath = "//div[@role='alert']")
+    public WebElement confirmationMessage;
+
+    @FindBy(xpath = "//tbody//tr//td[3]")
+    public List<WebElement> updatedResultsList;
+
+    @FindBy(id = "c-test-result-description")
+    public WebElement descriptionInput;
+
+    @FindBy(id = "c-test-result-id")
+    public WebElement idOfTest;
+
+    @FindBy(id = "c-test-result-date")
+    public WebElement dateOfTest;
+
+    @FindBy(id = "c-test-result-createdDate")
+    public WebElement createdDateOfTest;
+
+    @FindBy(id = "c-test-result-cTestItem")
+    public WebElement testItemOfTest;
+
+    @FindBy(id = "c-test-result-cTest")
+    public WebElement testIdOfTest;
+
 }
