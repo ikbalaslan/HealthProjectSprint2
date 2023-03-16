@@ -27,17 +27,17 @@ public class PhysicianApiStepDefs {
     static int actualDataApi;
 
     public static String getExpectedData() {
+
         return expectedData;
     }
-
     @When("Admin get count of physicians")
     public void admin_get_count_of_physicians() {
         String countOfItems = physicianPage.physicianCount.getText();
         System.out.println(countOfItems);
         String[] listOfString = countOfItems.split(" ");
         expectedData = listOfString[5];
+        System.out.println("listOfString = " + listOfString.toString());
         System.out.println("expectedData = " + expectedData);
-
     }
 
     @When("Admin send get request to API")
@@ -46,7 +46,6 @@ public class PhysicianApiStepDefs {
         response = given().headers("Authorization","Bearer "+ MedunnaAuthentication.generateToken()).contentType(ContentType.JSON).get(url);
         json = response.jsonPath();
         doctorList = json.getList("id");
-
     }
 
     @When("Admin get physicians count from API")
