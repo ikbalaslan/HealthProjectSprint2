@@ -1,6 +1,5 @@
 @US19
 Feature: US19
-
   Background:Doctor_goes_homepage_and_signin
     Given "Admin" goes home page
     When "Admin" clicks account menu
@@ -10,7 +9,6 @@ Feature: US19
     And "Admin" clicks sign in submit button
     And "Admin" clicks items&titiles menu
     And "Admin" clicks Physician
-
 #  Scenario: TC01 Admin can choose/search an existing registered person by SSN id
 #    And "Admin" clicks create a new Physician button
 #    And Admin clicks Use Search check box

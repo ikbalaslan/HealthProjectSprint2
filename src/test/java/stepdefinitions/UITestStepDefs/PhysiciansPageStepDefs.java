@@ -19,7 +19,8 @@ public class PhysiciansPageStepDefs {
     @And("{string} clicks Physician")
     public void clicksPhysician(String arg0) {
 
-        homePage.physicianOption.click();
+        ReusableMethods.waitFor(2);
+       JSUtils.clickElementByJS(homePage.physicianOption);
     }
 
     @And("{string} clicks create a new Physician button")
