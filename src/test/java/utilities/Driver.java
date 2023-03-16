@@ -37,9 +37,14 @@ public class Driver {
         if (driver == null) {
             String browser = ConfigReader.getProperty("browser");
             if ("chrome".equals(browser)) {
-                WebDriverManager.chromedriver().setup();
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--remote-allow-origins=*");
+                WebDriverManager.chromedriver().setup();
+<<<<<<< HEAD
+=======
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--remote-allow-origins=*");
+>>>>>>> main
                 driver = new ChromeDriver(options);
             } else if ("firefox".equals(browser)) {
                 WebDriverManager.firefoxdriver().setup();

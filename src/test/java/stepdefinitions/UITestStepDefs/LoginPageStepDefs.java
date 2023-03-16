@@ -1,5 +1,6 @@
 package stepdefinitions.UITestStepDefs;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.LoginPage;
@@ -20,4 +21,41 @@ public class LoginPageStepDefs {
     public void clicks_sign_in_submit_button(String string) {
         loginPage.submitButton.click();
     }
+
+    @And("{string} click on RememberMe checkbox")
+    public void clickOnRememberMeCheckbox(String string) {
+
+        loginPage.rememberMe.click();
+    }
+
+    @And("{string} click on My Pages\\(Patient)")
+    public void clickOnMyPagesPatient(String ar0) {
+        loginPage.MyPageOption.click();
+    }
+
+    @And("{string} click on My Appointments option")
+    public void clickOnMyAppointmentsOption(String arg0) {
+        loginPage.MyAppointmentOption.click();
+
+    }
+
+      @When("{string} click on Show Test button")
+    public void clickOnShowTestButton(String arg0) {
+
+        loginPage.ShowTestsButton.click();
+    }
+
+
+    @When("{string} click on View Result button")
+    public void clickOnViewResultButton(String arg0) {
+        loginPage.ViewResultsButton.click();
+
+    }
+
+    @When("{string} click on Show Invoice button")
+    public void clickOnShowInvoiceButton(String arg0) {
+        loginPage.ShowInvoiceButton.click();
+    }
+
+
 }
