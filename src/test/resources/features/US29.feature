@@ -34,3 +34,17 @@ Feature: Health_Project US29
     Then User clicks to State dropdown
     Then User verify to created city is exist at list
     And Admin close the app
+
+
+  @ApiTest
+  Scenario: TC03_User_should_Validate_to_Country
+    Given user sends GET request for country that created before
+    Then HTTP status code must be 200
+    Then Assert that user can see Middle Earth country
+
+  @countryDBTest
+  Scenario:Validate Country with DB
+    Given user connects to database
+    When get all "countries" as a list
+    Then verify Country list contains "Middle Earth"
+    And close the connection
