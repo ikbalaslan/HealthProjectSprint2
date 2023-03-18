@@ -253,7 +253,7 @@ public class CreatePatientByAdminStepDefs {
         Driver.waitAndClick(createPatientPage.saveButton);
         Driver.wait2(2);
         Driver.waitAndClick(createPatientPage.lastPageIcon);
-        Driver.wait2(2);
+        Driver.wait2(1);
         Driver.waitAndClick(createPatientPage.deleteButton);
 
 
@@ -264,7 +264,7 @@ public class CreatePatientByAdminStepDefs {
     }
     @Then("verify the user is deleted message")
     public void verify_the_user_is_deleted_message() throws InterruptedException {
-       Thread.sleep(2000);
+       Thread.sleep(1000);
        Assert.assertTrue(createPatientPage.patientDeletedMessage.isDisplayed());
     }
 

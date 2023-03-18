@@ -41,13 +41,12 @@ public class StaffDBStepDefs {
     }
 
 
-    @Given("user gets the column {string} from table {string}")
-    public void user_gets_the_column_from_table(String column, String table) {
+//    @Given("user gets the column {string} from table {string}")//   public void user_gets_the_column_from_table(String column, String table) {
 //        String query = "SELECT * FROM jhi_user";//HARD CODED
-        String query = "SELECT "+column+" FROM "+table+" Order By Id";//DYNAMIC QUERY
+//        String query = "SELECT "+column+" FROM "+table+" Order By Id";//DYNAMIC QUERY
 //        Running the query using util class
-        DBUtils.executeQuery(query);
-    }
+//        DBUtils.executeQuery(query);
+//    }
 
     @Then("verify table {string} and column {string} contains data {string}")
     public void verify_table_and_column_contains_data(String table, String column, String data) {

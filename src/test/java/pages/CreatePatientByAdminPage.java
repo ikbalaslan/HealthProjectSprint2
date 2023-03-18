@@ -150,7 +150,7 @@ public class CreatePatientByAdminPage {
     @FindBy(xpath = "//table/tbody/tr[last()]/td[last()]/div/a[3]")
     public WebElement deleteButton;
 
-    @FindBy(xpath = "//span[normalize-space()='Confirm delete operation']")
+    @FindBy(xpath = "//button[@id='jhi-confirm-delete-patient']")
     public WebElement deleteButtonMessage;
 
     @FindBy(xpath = "//*[contains(text(),'Patient is deleted')]")
