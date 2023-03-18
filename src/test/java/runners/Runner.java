@@ -17,11 +17,10 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
-        tags = "@US23"
+        tags = "@TC01_Create_Patient_By_Admin"
 
 
 )
 public class Runner {
 
 }
-//tma
